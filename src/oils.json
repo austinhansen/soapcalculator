@@ -1,0 +1,52 @@
+{
+  "olive-oil": {
+    "name": "Olive Oil",
+    "conditioning": "82",
+    "cleansing": "0",
+    "creaminess": "17",
+    "foaming": "0",
+    "hardness": "17",
+    "iodine": "85",
+    "INS": "105"
+  },
+  "coconut-oil-92": {
+    "name": "Coconut Oil, 92 Degrees",
+    "conditioning": "10",
+    "cleansing": "67",
+    "creaminess": "12",
+    "foaming": "67",
+    "hardness": "79",
+    "iodine": "3",
+    "INS": "258"
+  },
+  "lard": {
+    "name": "Lard (Pig Tallow)",
+    "conditioning": "52",
+    "cleansing": "1",
+    "creaminess": "41",
+    "foaming": "1",
+    "hardness": "42",
+    "iodine": "57",
+    "INS": "139"
+  },
+  "shea-butter": {
+    "name": "Shea Butter",
+    "conditioning": "54",
+    "cleansing": "0",
+    "creaminess": "45",
+    "foaming": "0",
+    "hardness": "45",
+    "iodine": "59",
+    "INS": "116"
+  },
+  "castor-oil": {
+    "name": "Castor Oil",
+    "conditioning": "98",
+    "cleansing": "0",
+    "creaminess": "90",
+    "foaming": "90",
+    "hardness": "0",
+    "iodine": "86",
+    "INS": "95"
+  }
+}

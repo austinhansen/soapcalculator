@@ -1,3 +1,13 @@
+.container {
+  margin-top: 10%;
+}
+
+.form-control-inline {
+  min-width: 0;
+  width: auto;
+  display: inline;
+}
+
 .App {
   text-align: center;
 }
@@ -16,9 +26,4 @@
 
 .App-intro {
   font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
