@@ -8,7 +8,7 @@ class OilList extends Component {
         <ul className="list-of-oils">
           <label>Select your oils</label>
           <div className="form-group">
-            <select className="form-control" onChange={(e) => this.props.addToIngredients(e)}>
+            <select className="form-control" onChange={(e) => this.props.addToSoap(e)}>
               <option></option>
               {
                 Object

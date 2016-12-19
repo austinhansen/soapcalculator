@@ -8,18 +8,17 @@ class App extends Component {
   constructor() {
     super();
 
-    // getinitialState
     this.state = {
       oils: {},
-      ingredients: {}
+      soap: {}
     };
 
-    this.addToIngredients = this.addToIngredients.bind(this);
-    this.removeFromIngredients = this.removeFromIngredients.bind(this);
+    this.addToSoap = this.addToSoap.bind(this);
+    this.removeFromSoap = this.removeFromSoap.bind(this);
   }
 
   componentWillUpdate(nextProps, nextState) {
-    localStorage.setItem(`ingredients`, JSON.stringify(nextState.ingredients));
+    localStorage.setItem(`soap`, JSON.stringify(nextState.soap));
   }
 
   componentWillMount() {
@@ -28,29 +27,28 @@ class App extends Component {
       oils: oilsJSON
     });
 
-    const localStorageRef = localStorage.getItem(`ingredients`);
+    const localStorageRef = localStorage.getItem(`soap`);
 
     if(localStorageRef) {
-      // update our App component's order state
       this.setState({
-        ingredients: JSON.parse(localStorageRef)
+        soap: JSON.parse(localStorageRef)
       });
     }
   }
 
-  addToIngredients(event) {
-    const ingredients = {...this.state.ingredients};
+  addToSoap(event) {
+    const soap = {...this.state.soap};
     const key = event.target.value;
 
-    ingredients[key] = this.state.oils[key];
+    soap[key] = this.state.oils[key];
 
-    this.setState({ ingredients });
+    this.setState({ soap });
   }
 
-  removeFromIngredients(key) {
-    const ingredients = {...this.state.ingredients};
-    delete ingredients[key];
-    this.setState({ ingredients });
+  removeFromSoap(key) {
+    const soap = {...this.state.soap};
+    delete soap[key];
+    this.setState({ soap });
   }
 
   render() {
@@ -76,11 +74,11 @@ class App extends Component {
             </div>
 
             <div className="col-md-3">
-              <OilList oils={this.state.oils} addToIngredients={this.addToIngredients} />
+              <OilList oils={this.state.oils} addToSoap={this.addToSoap} />
             </div>
 
             <div className="col-md-7">
-              <Soap ingredients={this.state.ingredients} removeFromIngredients={this.removeFromIngredients} />
+              <Soap soap={this.state.soap} removeFromSoap={this.removeFromSoap} />
             </div>
           </div>
         </div>
