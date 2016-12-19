@@ -8,8 +8,7 @@ class Ingredient extends Component {
       <div className="form-inline">
         <div className="form-group">
           <label className="form-control-inline">{details.name}</label>
-          <input type="text" className="form-control form-control-inline" key={`${index}-percent`} />
-          <input type="text" className="form-control form-control-inline" key={`${index}-mass`} />{removeButton}
+          <input type="range" min="0" max="100" className="form-control form-control-inline" key={`${index}-percent`} />{removeButton}
         </div>
       </div>
     );

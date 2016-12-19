@@ -18,11 +18,24 @@ class App extends Component {
     this.removeFromIngredients = this.removeFromIngredients.bind(this);
   }
 
+  componentWillUpdate(nextProps, nextState) {
+    localStorage.setItem(`ingredients`, JSON.stringify(nextState.ingredients));
+  }
+
   componentWillMount() {
     const oilsJSON = require('../oils.json');
     this.setState({
       oils: oilsJSON
     });
+
+    const localStorageRef = localStorage.getItem(`ingredients`);
+
+    if(localStorageRef) {
+      // update our App component's order state
+      this.setState({
+        ingredients: JSON.parse(localStorageRef)
+      });
+    }
   }
 
   addToIngredients(event) {

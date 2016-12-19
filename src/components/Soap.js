@@ -2,10 +2,18 @@ import React, { Component } from 'react';
 import Ingredient from './Ingredient';
 
 class Soap extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      total: ''
+    };
+  }
+
   render() {
     return (
       <div>
-        <span>%</span><span>Grams</span>
+        <span>Percent</span>
         {
           Object
             .keys(this.props.ingredients)
@@ -19,7 +27,7 @@ class Soap extends Component {
         <div className="form-inline">
           <div className="form-group">
             <label>Total:</label>
-            <input type="number" className="form-control" name="weight" disabled />
+            <input type="number" className="form-control" name="weight" disabled value={this.total} />
           </div>
         </div>
       </div>
