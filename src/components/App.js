@@ -36,12 +36,9 @@ class App extends Component {
     }
   }
 
-  addToSoap(event) {
+  addToSoap(key) {
     const soap = {...this.state.soap};
-    const key = event.target.value;
-
     soap[key] = this.state.oils[key];
-
     this.setState({ soap });
   }
 
