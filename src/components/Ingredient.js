@@ -1,15 +1,30 @@
 import React, { Component } from 'react';
+import { InputGroup, ControlLabel, FormControl, Button } from 'react-bootstrap';
 
 class Ingredient extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      value: ''
+    };
+  }
+
+  handleChange = (event) =>  {
+    this.setState({value: event.target.value});
+  }
+
   render() {
     const { details, index } = this.props;
-    const removeButton = <button onClick={() => this.props.removeFromSoap(index)}>&times;</button>
     return (
-      <div className="form-inline">
-        <div className="form-group">
-          <label className="form-control-inline">{details.name}</label>
-          <input type="range" min="0" max="100"  className="form-control form-control-inline" key={`${index}-percent`} />{removeButton}
-        </div>
+      <div>
+        <ControlLabel>{details.name}</ControlLabel>
+        <InputGroup>
+          <FormControl type="number" onChange={this.handleChange} key={`${index}-percent`} />
+          <InputGroup.Button onClick={() => this.props.removeFromSoap(index)}>
+            <Button bsStyle="danger">x</Button>
+          </InputGroup.Button>
+        </InputGroup>
       </div>
     );
   }
