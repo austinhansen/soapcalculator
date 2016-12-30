@@ -3,18 +3,6 @@ import Ingredient from './Ingredient';
 import { ControlLabel, Form, InputGroup, FormGroup, FormControl } from 'react-bootstrap';
 
 class Soap extends Component {
-  constructor() {
-    super();
-    this.updateIngredientPercentage = this.updateIngredientPercentage.bind(this);
-  }
-
-  updateIngredientPercentage(key, value) {
-    const soap = {...this.props.soap};
-    const percentage = value >= 0 ? value : 0;
-    soap[key]['value'] = percentage;
-    this.setState({ soap });
-  }
-
   render() {
     const soapIds = Object.keys(this.props.soap);
     const total = soapIds.reduce((prevTotal, key) => {
@@ -34,7 +22,7 @@ class Soap extends Component {
                 index={key}
                 details={this.props.soap[key]}
                 removeFromSoap={this.props.removeFromSoap}
-                updateIngredientPercentage={this.updateIngredientPercentage}
+                updateIngredientPercentage={this.props.updateIngredientPercentage}
               />)
           }
         </FormGroup>

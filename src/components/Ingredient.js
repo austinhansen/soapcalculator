@@ -14,6 +14,7 @@ class Ingredient extends Component {
         <ControlLabel>{details.name}</ControlLabel>
         <InputGroup>
           <FormControl type="number" onChange={this.handleChange} key={`${index}-percent`} />
+          <InputGroup.Addon>%</InputGroup.Addon>
           <InputGroup.Button onClick={() => this.props.removeFromSoap(index)}>
             <Button bsStyle="danger">x</Button>
           </InputGroup.Button>
