@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Grid, Row, Col, FormGroup, InputGroup, FormControl, ControlLabel } from 'react-bootstrap';
 import OilList from './OilList';
 import Soap from './Soap';
 import '../css/App.css';
@@ -51,34 +52,43 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="container">
-          <div className="row">
-            <div className="col-xs-2 col-md-2">
-              <label>Weight</label>
-              <div className="form-group">
-                <input type="number" className="form-control" name="weight" placeholder="Grams" />
-              </div>
+        <Grid>
+          <Row className="show-grid">
+            <Col xs={2}>
+              <FormGroup>
+                <ControlLabel>Weight</ControlLabel>
+                <InputGroup>
+                  <FormControl type="number" />
+                  <InputGroup.Addon>g</InputGroup.Addon>
+                </InputGroup>
+              </FormGroup>
 
-              <label>Water Percentage</label>
-              <div className="form-group">
-                <input type="number" className="form-control" name="water-percentage" />
-              </div>
+              <FormGroup>
+                <ControlLabel>Water</ControlLabel>
+                <InputGroup>
+                  <FormControl type="number" />
+                  <InputGroup.Addon>%</InputGroup.Addon>
+                </InputGroup>
+              </FormGroup>
 
-              <label>Super Fat %</label>
-              <div className="form-group">
-                <input type="number" className="form-control" name="fat" defaultValue={5} />
-              </div>
-            </div>
+              <FormGroup>
+                <ControlLabel>Super Fat</ControlLabel>
+                <InputGroup>
+                  <FormControl type="number" />
+                  <InputGroup.Addon>%</InputGroup.Addon>
+                </InputGroup>
+              </FormGroup>
+            </Col>
 
-            <div className="col-md-4">
+            <Col xs={3}>
               <OilList oils={this.state.oils} addToSoap={this.addToSoap} />
-            </div>
+            </Col>
 
-            <div className="col-md-6">
+            <Col xs={7}>
               <Soap soap={this.state.soap} removeFromSoap={this.removeFromSoap} />
-            </div>
-          </div>
-        </div>
+            </Col>
+          </Row>
+        </Grid>
       </div>
     );
   }
