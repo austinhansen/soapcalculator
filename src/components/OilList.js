@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Oil from './Oil';
+import { Button, FormGroup, FormControl, ControlLabel, ListGroup, ListGroupItem } from 'react-bootstrap';
 
 class OilList extends Component {
   constructor() {
@@ -26,30 +27,30 @@ class OilList extends Component {
   render() {
     return (
       <div>
-        <ul className="list-of-oils">
-          <div className="form-group form-inline">
-            <label>Select your oils</label>
-            <select onChange={this.handleChange} className="form-control" >
+        <form>
+          <FormGroup>
+            <ControlLabel>Select your oils</ControlLabel>
+            <FormControl onChange={this.handleChange} componentClass="select" >
               <option></option>
               {
                 Object
                   .keys(this.props.oils)
                   .map(key => <Oil key={key} index={key} details={this.props.oils[key]}/>)
               }
-            </select>
-            <button onClick={this.handleSubmit} className="btn btn-success">Add</button>
-          </div>
-        </ul>
+            </FormControl>
+            <Button onClick={this.handleSubmit} bsStyle="primary" block >Add</Button>
+          </FormGroup>
+        </form>
 
-        <ul className="oil-properties">
-          <li className="cleansing">Cleansing: <input type="text" disabled value={this.state.selectedOil.cleansing || ''} /></li>
-          <li className="conditioning">Conditioning: <input type="text" disabled value={this.state.selectedOil.conditioning || ''} /></li>
-          <li className="creaminess">Creaminess: <input type="text" disabled value={this.state.selectedOil.creaminess || ''} /></li>
-          <li className="foaming">Foaming: <input type="text" disabled value={this.state.selectedOil.foaming || ''} /></li>
-          <li className="hardness">Hardness: <input type="text" disabled value={this.state.selectedOil.hardness || ''} /></li>
-          <li className="iodine">Iodine: <input type="text" disabled value={this.state.selectedOil.iodine || ''} /></li>
-          <li className="INS">INS: <input type="text" disabled value={this.state.selectedOil.INS || ''} /></li>
-        </ul>
+        <ListGroup>
+          <ListGroupItem>Cleansing: {this.state.selectedOil.cleansing || ''}</ListGroupItem>
+          <ListGroupItem>Conditioning: {this.state.selectedOil.conditioning || ''}</ListGroupItem>
+          <ListGroupItem>Creaminess: {this.state.selectedOil.creaminess || ''}</ListGroupItem>
+          <ListGroupItem>Foaming: {this.state.selectedOil.foaming || ''}</ListGroupItem>
+          <ListGroupItem>Hardness: {this.state.selectedOil.hardness || ''}</ListGroupItem>
+          <ListGroupItem>Iodine: {this.state.selectedOil.iodine || ''}</ListGroupItem>
+          <ListGroupItem>INS: {this.state.selectedOil.INS || ''}</ListGroupItem>
+        </ListGroup>
       </div>
     );
   }
