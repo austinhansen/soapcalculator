@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col, FormGroup, InputGroup, FormControl, ControlLabel } from 'react-bootstrap';
+import Banner from './Banner';
 import OilList from './OilList';
 import Soap from './Soap';
 import '../css/App.css';
@@ -51,7 +52,8 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div>
+        <Banner />
         <Grid>
           <Row className="show-grid">
             <Col xs={2}>
