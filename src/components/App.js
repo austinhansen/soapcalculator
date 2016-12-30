@@ -70,11 +70,11 @@ class App extends Component {
               </div>
             </div>
 
-            <div className="col-md-3">
+            <div className="col-md-4">
               <OilList oils={this.state.oils} addToSoap={this.addToSoap} />
             </div>
 
-            <div className="col-md-7">
+            <div className="col-md-6">
               <Soap soap={this.state.soap} removeFromSoap={this.removeFromSoap} />
             </div>
           </div>

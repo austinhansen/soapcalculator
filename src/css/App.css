@@ -2,6 +2,11 @@
   margin-top: 10%;
 }
 
+.oil-properties {
+  list-style: none;
+  text-align: left;
+}
+
 .form-control-inline {
   min-width: 0;
   width: auto;

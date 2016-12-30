@@ -4,25 +4,32 @@ import Oil from './Oil';
 class OilList extends Component {
   constructor() {
     super();
-    this.state = {value: ''};
+    this.state = {selectedOil: {name: ''}};
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange = (event) =>  {
-    this.setState({value: event.target.value});
+    const oils = this.props.oils;
+    const key = event.target.value;
+    const oil = oils[key];
+    oil['key'] = key
+
+    if(oil) {
+      this.setState({selectedOil: oil});
+    };
   }
 
   handleSubmit() {
-    this.props.addToSoap(this.state.value);
+    this.props.addToSoap(this.state.selectedOil.key);
   }
 
   render() {
     return (
       <div>
         <ul className="list-of-oils">
-          <label>Select your oils</label>
           <div className="form-group form-inline">
-            <select value={this.state.value} onChange={this.handleChange} className="form-control" >
+            <label>Select your oils</label>
+            <select onChange={this.handleChange} className="form-control" >
               <option></option>
               {
                 Object
@@ -30,8 +37,18 @@ class OilList extends Component {
                   .map(key => <Oil key={key} index={key} details={this.props.oils[key]}/>)
               }
             </select>
-            <button onClick={this.handleSubmit}>Add</button>
+            <button onClick={this.handleSubmit} className="btn btn-success">Add</button>
           </div>
+        </ul>
+
+        <ul className="oil-properties">
+          <li className="cleansing">Cleansing: <input type="text" disabled value={this.state.selectedOil.cleansing || ''} /></li>
+          <li className="conditioning">Conditioning: <input type="text" disabled value={this.state.selectedOil.conditioning || ''} /></li>
+          <li className="creaminess">Creaminess: <input type="text" disabled value={this.state.selectedOil.creaminess || ''} /></li>
+          <li className="foaming">Foaming: <input type="text" disabled value={this.state.selectedOil.foaming || ''} /></li>
+          <li className="hardness">Hardness: <input type="text" disabled value={this.state.selectedOil.hardness || ''} /></li>
+          <li className="iodine">Iodine: <input type="text" disabled value={this.state.selectedOil.iodine || ''} /></li>
+          <li className="INS">INS: <input type="text" disabled value={this.state.selectedOil.INS || ''} /></li>
         </ul>
       </div>
     );
