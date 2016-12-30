@@ -77,9 +77,11 @@ class App extends Component {
   }
 
   addToSoap(key) {
-    const soap = {...this.state.soap};
-    soap[key] = this.state.oils[key];
-    this.setState({ soap });
+    if(key) {
+      const soap = {...this.state.soap};
+      soap[key] = this.state.oils[key];
+      this.setState({ soap });
+    }
   }
 
   removeFromSoap(key) {
