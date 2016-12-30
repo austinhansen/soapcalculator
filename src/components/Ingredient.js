@@ -2,16 +2,9 @@ import React, { Component } from 'react';
 import { InputGroup, ControlLabel, FormControl, Button } from 'react-bootstrap';
 
 class Ingredient extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      value: ''
-    };
-  }
-
   handleChange = (event) =>  {
-    this.setState({value: event.target.value});
+    const { index } = this.props;
+    this.props.updateIngredientPercentage(index, event.target.value)
   }
 
   render() {

@@ -1,15 +1,27 @@
 import React, { Component } from 'react';
 import Ingredient from './Ingredient';
-import { ControlLabel, Form, FormGroup, FormControl } from 'react-bootstrap';
+import { ControlLabel, Form, InputGroup, FormGroup, FormControl } from 'react-bootstrap';
 
 class Soap extends Component {
+  constructor() {
+    super();
+    this.updateIngredientPercentage = this.updateIngredientPercentage.bind(this);
+  }
+
+  updateIngredientPercentage(key, value) {
+    const soap = {...this.props.soap};
+    const percentage = value >= 0 ? value : 0;
+    soap[key]['value'] = percentage;
+    this.setState({ soap });
+  }
+
   render() {
     const soapIds = Object.keys(this.props.soap);
     const total = soapIds.reduce((prevTotal, key) => {
-      // const fish = this.props.oils[key];
-      // const count = this.props.soap[key];
-      // return prevTotal + (count || 0)
+      const percentage = parseInt(this.props.soap[key]['value']);
+      return prevTotal + (percentage || 0);
     }, 0);
+
     return (
       <div>
         <ControlLabel>Oil Percentages</ControlLabel>
@@ -22,15 +34,18 @@ class Soap extends Component {
                 index={key}
                 details={this.props.soap[key]}
                 removeFromSoap={this.props.removeFromSoap}
+                updateIngredientPercentage={this.updateIngredientPercentage}
               />)
           }
         </FormGroup>
         <Form inline>
-         <FormGroup>
-           <ControlLabel>Total:</ControlLabel>
-           {' '}
-           <FormControl type="number" />
-         </FormGroup>
+          <FormGroup>
+            <ControlLabel>Total:</ControlLabel>
+            <InputGroup>
+              <FormControl type="number" value={total} readOnly />
+              <InputGroup.Addon>%</InputGroup.Addon>
+            </InputGroup>
+          </FormGroup>
        </Form>
       </div>
     );
