@@ -46,7 +46,7 @@ class App extends Component {
   updateWeight = (event) =>  {
     const recipe = {...this.state.recipe};
     const soap = {...this.state.soap};
-    const weight = this.state.weight;
+    const weight = event.target.value;
     const recipeIds = Object.keys(recipe)
 
     const updatedRecipe = recipeIds.reduce((prevObject, key) => {
@@ -56,7 +56,7 @@ class App extends Component {
     }, {});
 
     this.setState({
-      weight: event.target.value,
+      weight: weight,
       recipe: updatedRecipe
     });
   }
