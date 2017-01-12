@@ -95,8 +95,9 @@ class App extends Component {
       <div>
         <Banner />
         <Grid>
+          <h2>Ingredients</h2>
           <Row className="show-grid">
-            <Col xs={3}>
+            <Col sm={4}>
               <FormGroup>
                 <ControlLabel>Weight</ControlLabel>
                 <InputGroup>
@@ -104,18 +105,20 @@ class App extends Component {
                   <InputGroup.Addon>g</InputGroup.Addon>
                 </InputGroup>
               </FormGroup>
-            </Col>
 
-            <Col xs={3}>
               <OilList oils={this.state.oils} addToSoap={this.addToSoap} />
             </Col>
 
-            <Col xs={6}>
+            <Col sm={8}>
               <Soap soap={this.state.soap} weight={this.state.weight} removeFromSoap={this.removeFromSoap} updateIngredientPercentage={this.updateIngredientPercentage} />
             </Col>
           </Row>
+
+          <h2>Recipe</h2>
           <Row>
+            <Col sm={6}>
             <Recipe soap={this.state.soap} recipe={this.state.recipe} oils={this.state.oils} />
+            </Col>
           </Row>
         </Grid>
       </div>

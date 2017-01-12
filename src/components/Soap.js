@@ -6,7 +6,7 @@ class Soap extends Component {
   render() {
     const soapIds = Object.keys(this.props.soap);
     const total = soapIds.reduce((prevTotal, key) => {
-      const percentage = parseInt(this.props.soap[key]['value']);
+      const percentage = parseInt(this.props.soap[key]['value'], 10);
       return prevTotal + (percentage || 0);
     }, 0);
 
