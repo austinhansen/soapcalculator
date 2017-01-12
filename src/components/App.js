@@ -104,22 +104,6 @@ class App extends Component {
                   <InputGroup.Addon>g</InputGroup.Addon>
                 </InputGroup>
               </FormGroup>
-
-              <FormGroup>
-                <ControlLabel>Water</ControlLabel>
-                <InputGroup>
-                  <FormControl type="number" />
-                  <InputGroup.Addon>%</InputGroup.Addon>
-                </InputGroup>
-              </FormGroup>
-
-              <FormGroup>
-                <ControlLabel>Super Fat</ControlLabel>
-                <InputGroup>
-                  <FormControl type="number" />
-                  <InputGroup.Addon>%</InputGroup.Addon>
-                </InputGroup>
-              </FormGroup>
             </Col>
 
             <Col xs={3}>
