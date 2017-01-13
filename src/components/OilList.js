@@ -45,31 +45,31 @@ class OilList extends Component {
         <Table striped bordered hover>
           <tbody>
             <tr>
-              <td>Cleansing (12 to 22):</td>
+              <td>Cleansing:</td>
               <td>{this.state.selectedOil.cleansing || ''}</td>
             </tr>
             <tr>
-              <td>Conditioning (44 to 69):</td>
+              <td>Conditioning:</td>
               <td>{this.state.selectedOil.conditioning || ''}</td>
             </tr>
             <tr>
-              <td>Creaminess (16 to 48):</td>
+              <td>Creaminess:</td>
               <td>{this.state.selectedOil.creaminess || ''}</td>
             </tr>
             <tr>
-              <td>Foaming (14 to 46):</td>
+              <td>Foaming:</td>
               <td>{this.state.selectedOil.foaming || ''}</td>
             </tr>
             <tr>
-              <td>Hardness (29 to 54):</td>
+              <td>Hardness:</td>
               <td>{this.state.selectedOil.hardness || ''}</td>
             </tr>
             <tr>
-              <td>Iodine (41 to 70):</td>
+              <td>Iodine:</td>
               <td>{this.state.selectedOil.iodine || ''}</td>
             </tr>
             <tr>
-              <td>INS (136 to 165):</td>
+              <td>INS:</td>
               <td>{this.state.selectedOil.INS || ''}</td>
             </tr>
           </tbody>

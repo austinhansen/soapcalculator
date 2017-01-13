@@ -4,6 +4,7 @@ import Banner from './Banner';
 import OilList from './OilList';
 import Soap from './Soap';
 import Recipe from './Recipe';
+import SoapProperties from './SoapProperties';
 import '../css/App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -122,6 +123,7 @@ class App extends Component {
             <Col sm={4}>
               <h4>C. Soap Properties</h4>
               <hr />
+              <SoapProperties soap={this.state.soap} />
             </Col>
           </Row>
 
