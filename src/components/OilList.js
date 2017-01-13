@@ -44,13 +44,13 @@ class OilList extends Component {
         </form>
 
         <ListGroup>
-          <ListGroupItem>Cleansing: {this.state.selectedOil.cleansing || ''}</ListGroupItem>
-          <ListGroupItem>Conditioning: {this.state.selectedOil.conditioning || ''}</ListGroupItem>
-          <ListGroupItem>Creaminess: {this.state.selectedOil.creaminess || ''}</ListGroupItem>
-          <ListGroupItem>Foaming: {this.state.selectedOil.foaming || ''}</ListGroupItem>
-          <ListGroupItem>Hardness: {this.state.selectedOil.hardness || ''}</ListGroupItem>
-          <ListGroupItem>Iodine: {this.state.selectedOil.iodine || ''}</ListGroupItem>
-          <ListGroupItem>INS: {this.state.selectedOil.INS || ''}</ListGroupItem>
+          <ListGroupItem>Cleansing: {this.state.selectedOil.cleansing || ''} (12 to 22)</ListGroupItem>
+          <ListGroupItem>Conditioning: {this.state.selectedOil.conditioning || ''} (44 to 69)</ListGroupItem>
+          <ListGroupItem>Creaminess: {this.state.selectedOil.creaminess || ''} (16 to 48)</ListGroupItem>
+          <ListGroupItem>Foaming: {this.state.selectedOil.foaming || ''} (14 to 46)</ListGroupItem>
+          <ListGroupItem>Hardness: {this.state.selectedOil.hardness || ''} (29 to 54)</ListGroupItem>
+          <ListGroupItem>Iodine: {this.state.selectedOil.iodine || ''} (41 to 70)</ListGroupItem>
+          <ListGroupItem>INS: {this.state.selectedOil.INS || ''} (136 to 165)</ListGroupItem>
         </ListGroup>
       </div>
     );
