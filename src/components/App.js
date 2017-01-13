@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col, FormGroup, InputGroup, FormControl, ControlLabel } from 'react-bootstrap';
+import { Grid, Row, Col, FormGroup, InputGroup, FormControl } from 'react-bootstrap';
 import Banner from './Banner';
 import OilList from './OilList';
 import Soap from './Soap';
@@ -97,9 +97,8 @@ class App extends Component {
         <Grid>
           <Row className="show-grid">
             <Col sm={12}>
-              <h2>Step 1: Ingredients</h2>
+              <h2>Step 1: Soap Weight</h2>
               <FormGroup>
-                <ControlLabel>Weight</ControlLabel>
                 <InputGroup>
                   <FormControl onChange={this.updateWeight} type="number" />
                   <InputGroup.Addon>g</InputGroup.Addon>
