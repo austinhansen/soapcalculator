@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Oil from './Oil';
-import { Button, FormGroup, FormControl, ListGroup, ListGroupItem } from 'react-bootstrap';
+import { Button, FormGroup, FormControl, Table } from 'react-bootstrap';
 
 class OilList extends Component {
   constructor() {
@@ -39,19 +39,43 @@ class OilList extends Component {
                   .map(key => <Oil key={key} index={key} details={this.props.oils[key]}/>)
               }
             </FormControl>
-            <Button onClick={this.handleSubmit} bsStyle="primary" block >Add</Button>
           </FormGroup>
         </form>
 
-        <ListGroup>
-          <ListGroupItem>Cleansing: {this.state.selectedOil.cleansing || ''} (12 to 22)</ListGroupItem>
-          <ListGroupItem>Conditioning: {this.state.selectedOil.conditioning || ''} (44 to 69)</ListGroupItem>
-          <ListGroupItem>Creaminess: {this.state.selectedOil.creaminess || ''} (16 to 48)</ListGroupItem>
-          <ListGroupItem>Foaming: {this.state.selectedOil.foaming || ''} (14 to 46)</ListGroupItem>
-          <ListGroupItem>Hardness: {this.state.selectedOil.hardness || ''} (29 to 54)</ListGroupItem>
-          <ListGroupItem>Iodine: {this.state.selectedOil.iodine || ''} (41 to 70)</ListGroupItem>
-          <ListGroupItem>INS: {this.state.selectedOil.INS || ''} (136 to 165)</ListGroupItem>
-        </ListGroup>
+        <Table striped bordered hover>
+          <tbody>
+            <tr>
+              <td>Cleansing (12 to 22):</td>
+              <td>{this.state.selectedOil.cleansing || ''}</td>
+            </tr>
+            <tr>
+              <td>Conditioning (44 to 69):</td>
+              <td>{this.state.selectedOil.conditioning || ''}</td>
+            </tr>
+            <tr>
+              <td>Creaminess (16 to 48):</td>
+              <td>{this.state.selectedOil.creaminess || ''}</td>
+            </tr>
+            <tr>
+              <td>Foaming (14 to 46):</td>
+              <td>{this.state.selectedOil.foaming || ''}</td>
+            </tr>
+            <tr>
+              <td>Hardness (29 to 54):</td>
+              <td>{this.state.selectedOil.hardness || ''}</td>
+            </tr>
+            <tr>
+              <td>Iodine (41 to 70):</td>
+              <td>{this.state.selectedOil.iodine || ''}</td>
+            </tr>
+            <tr>
+              <td>INS (136 to 165):</td>
+              <td>{this.state.selectedOil.INS || ''}</td>
+            </tr>
+          </tbody>
+        </Table>
+
+        <Button onClick={this.handleSubmit} bsStyle="primary" block >Add</Button>
       </div>
     );
   }
