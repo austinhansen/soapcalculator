@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Oil from './Oil';
-import { Button, FormGroup, FormControl, ControlLabel, ListGroup, ListGroupItem } from 'react-bootstrap';
+import { Button, FormGroup, FormControl, ListGroup, ListGroupItem } from 'react-bootstrap';
 
 class OilList extends Component {
   constructor() {
@@ -29,7 +29,8 @@ class OilList extends Component {
       <div>
         <form>
           <FormGroup>
-            <ControlLabel>Select your oils</ControlLabel>
+            <h4>A. Choose Oils</h4>
+            <hr />
             <FormControl onChange={this.handleChange} componentClass="select" >
               <option></option>
               {

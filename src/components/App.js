@@ -95,9 +95,9 @@ class App extends Component {
       <div>
         <Banner />
         <Grid>
-          <h2>Ingredients</h2>
           <Row className="show-grid">
-            <Col sm={4}>
+            <Col sm={12}>
+              <h2>Step 1: Ingredients</h2>
               <FormGroup>
                 <ControlLabel>Weight</ControlLabel>
                 <InputGroup>
@@ -105,19 +105,33 @@ class App extends Component {
                   <InputGroup.Addon>g</InputGroup.Addon>
                 </InputGroup>
               </FormGroup>
-
-              <OilList oils={this.state.oils} addToSoap={this.addToSoap} />
-            </Col>
-
-            <Col sm={8}>
-              <Soap soap={this.state.soap} weight={this.state.weight} removeFromSoap={this.removeFromSoap} updateIngredientPercentage={this.updateIngredientPercentage} />
             </Col>
           </Row>
 
-          <h2>Recipe</h2>
+          <hr />
+
+          <h2>Step 2: Soap Composition</h2>
+          <Row className="show-grid">
+            <Col sm={4}>
+              <OilList oils={this.state.oils} addToSoap={this.addToSoap} />
+            </Col>
+
+            <Col sm={4}>
+              <Soap soap={this.state.soap} weight={this.state.weight} removeFromSoap={this.removeFromSoap} updateIngredientPercentage={this.updateIngredientPercentage} />
+            </Col>
+
+            <Col sm={4}>
+              <h4>C. Soap Properties</h4>
+              <hr />
+            </Col>
+          </Row>
+
+          <hr />
+
           <Row>
             <Col sm={6}>
-            <Recipe soap={this.state.soap} recipe={this.state.recipe} oils={this.state.oils} />
+              <h2>Step 3: Your Soap Recipe</h2>
+              <Recipe soap={this.state.soap} recipe={this.state.recipe} oils={this.state.oils} />
             </Col>
           </Row>
         </Grid>

@@ -12,7 +12,8 @@ class Soap extends Component {
 
     return (
       <div>
-        <ControlLabel>Oil Percentages</ControlLabel>
+        <h4>B. Choose Oil Percentages</h4>
+        <hr />
         <FormGroup>
           {
             Object
