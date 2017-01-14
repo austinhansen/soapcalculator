@@ -15,7 +15,6 @@ class App extends Component {
     this.state = {
       oils: {},
       soap: {},
-      recipe: {},
       weight: ''
     };
 
@@ -27,6 +26,7 @@ class App extends Component {
 
   componentWillUpdate(nextProps, nextState) {
     localStorage.setItem(`soap`, JSON.stringify(nextState.soap));
+    localStorage.setItem(`weight`, JSON.stringify(nextState.weight));
   }
 
   componentWillMount() {
@@ -35,45 +35,37 @@ class App extends Component {
       oils: oilsJSON
     });
 
-    const localStorageRef = localStorage.getItem(`soap`);
+    const localStorageSoap = localStorage.getItem(`soap`);
+    const localStorageWeight = localStorage.getItem(`weight`);
 
-    if(localStorageRef) {
+    if(localStorageSoap) {
       this.setState({
-        soap: JSON.parse(localStorageRef)
+        soap: JSON.parse(localStorageSoap)
+      });
+    }
+
+    if(localStorageWeight) {
+      this.setState({
+        weight: JSON.parse(localStorageWeight)
       });
     }
   }
 
   updateWeight = (event) =>  {
-    const recipe = {...this.state.recipe};
-    const soap = {...this.state.soap};
     const weight = event.target.value;
-    const recipeIds = Object.keys(recipe)
-
-    const updatedRecipe = recipeIds.reduce((prevObject, key) => {
-      const percentage = soap[key].value;
-      prevObject[key] = percentage * weight / 100 || 0;
-      return prevObject;
-    }, {});
 
     this.setState({
-      weight: weight,
-      recipe: updatedRecipe
+      weight: weight
     });
   }
 
   updateIngredientPercentage(key, value) {
-    const soap = {...this.state.soap};
+    const soap = this.state.soap;
     const percentage = value >= 0 ? value : 0;
     soap[key]['value'] = percentage;
 
-    const recipe = {...this.state.recipe};
-    const weight = this.state.weight;
-    recipe[key] = percentage * weight / 100 || 0;
-
     this.setState({
-      soap: soap,
-      recipe: recipe
+      soap: soap
     });
   }
 
@@ -101,7 +93,7 @@ class App extends Component {
               <h2>Step 1: Soap Weight</h2>
               <FormGroup>
                 <InputGroup>
-                  <FormControl onChange={this.updateWeight} type="number" />
+                  <FormControl value={this.state.weight} onChange={this.updateWeight} type="number" />
                   <InputGroup.Addon>g</InputGroup.Addon>
                 </InputGroup>
               </FormGroup>
@@ -132,7 +124,7 @@ class App extends Component {
           <Row>
             <Col sm={6}>
               <h2>Step 3: Your Soap Recipe</h2>
-              <Recipe soap={this.state.soap} recipe={this.state.recipe} oils={this.state.oils} />
+              <Recipe soap={this.state.soap} weight={this.state.weight} oils={this.state.oils} />
             </Col>
           </Row>
         </Grid>

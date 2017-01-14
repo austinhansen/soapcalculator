@@ -2,6 +2,16 @@ import React, { Component } from 'react';
 import { Table } from 'react-bootstrap';
 
 class Recipe extends Component {
+  constructor() {
+    super();
+    this.oilWeight = this.oilWeight.bind(this);
+  }
+
+  oilWeight(oil) {
+    const totalWeight = this.props.weight;
+    return oil * totalWeight / 100 || 0;
+  }
+
   render() {
     return (
       <div>
@@ -19,7 +29,7 @@ class Recipe extends Component {
               .map(key =>
                 <tr key={key}>
                   <td>{this.props.oils[key].name}</td>
-                  <td>{this.props.recipe[key]}</td>
+                  <td>{this.oilWeight(this.props.soap[key].value)}</td>
                 </tr>
               )
             }
