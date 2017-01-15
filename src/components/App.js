@@ -113,7 +113,7 @@ class App extends Component {
             </Col>
 
             <Col sm={4}>
-              <h4>C. Soap Properties</h4>
+              <h4>C. Your Soap's Properties</h4>
               <hr />
               <SoapProperties soap={this.state.soap} />
             </Col>
