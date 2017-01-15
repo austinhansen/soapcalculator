@@ -25,6 +25,9 @@ class SoapProperties extends Component {
   render() {
     return (
       <div>
+        <h4>C. Your Soap's Properties</h4>
+        <hr />
+
         <Table striped bordered hover>
           <tbody>
             <tr>

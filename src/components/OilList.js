@@ -32,7 +32,7 @@ class OilList extends Component {
             <h4>A. Choose Oils</h4>
             <hr />
             <FormControl onChange={this.handleChange} componentClass="select" >
-              <option></option>
+              <option>Select Oil</option>
               {
                 Object
                   .keys(this.props.oils)
