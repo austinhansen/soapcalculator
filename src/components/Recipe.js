@@ -18,7 +18,7 @@ class Recipe extends Component {
         <Table striped bordered condensed hover>
           <thead>
             <tr>
-              <th>Oil</th>
+              <th>Ingredient</th>
               <th>Amount (g)</th>
             </tr>
           </thead>
@@ -33,6 +33,14 @@ class Recipe extends Component {
                 </tr>
               )
             }
+            <tr>
+              <td>Water (30%)</td>
+              <td>{(this.props.weight * 0.3).toFixed(2)}</td>
+            </tr>
+            <tr>
+              <td>Lye (NaOH)</td>
+              <td>{(this.props.weight * 0.3 / 2.2358).toFixed(2)}</td>
+            </tr>
           </tbody>
         </Table>
       </div>
