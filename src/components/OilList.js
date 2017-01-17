@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Oil from './Oil';
-import { Button, FormGroup, FormControl, Table } from 'react-bootstrap';
+import { Button, FormGroup, Table } from 'react-bootstrap';
+import Select from 'react-select';
 
 class OilList extends Component {
   constructor() {
@@ -9,11 +9,11 @@ class OilList extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange = (event) =>  {
+  handleChange = (option) =>  {
     const oils = this.props.oils;
-    const key = event.target.value;
+    const key = option.value;
     const oil = oils[key];
-    oil['key'] = key
+    oil["key"] = key;
 
     if(oil) {
       this.setState({selectedOil: oil});
@@ -25,20 +25,19 @@ class OilList extends Component {
   }
 
   render() {
+    const options =
+      Object
+        .keys(this.props.oils)
+        .map(key => ({"value": key, "label": this.props.oils[key].name}));
+
     return (
       <div>
         <form>
           <FormGroup>
             <h4>A. Choose Oils</h4>
             <hr />
-            <FormControl onChange={this.handleChange} componentClass="select" >
-              <option>Select Oil</option>
-              {
-                Object
-                  .keys(this.props.oils)
-                  .map(key => <Oil key={key} index={key} details={this.props.oils[key]}/>)
-              }
-            </FormControl>
+
+            <Select options={options} onChange={this.handleChange} value={this.state.selectedOil.key} clearable={false} />
           </FormGroup>
         </form>
 

@@ -39,6 +39,7 @@ class Soap extends Component {
         <Form inline>
           <FormGroup>
             <ControlLabel>Total:</ControlLabel>
+            {" "}
             <InputGroup>
               <FormControl type="number" value={total} readOnly />
               <InputGroup.Addon>%</InputGroup.Addon>
