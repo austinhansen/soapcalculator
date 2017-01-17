@@ -1,43 +1,153 @@
 {
-  "olive-oil": {
-    "name": "Olive Oil",
-    "conditioning": "82",
-    "cleansing": "0",
-    "creaminess": "17",
-    "foaming": "0",
-    "hardness": "17",
-    "iodine": "85",
-    "INS": "105"
-  },
-  "coconut-oil-92": {
-    "name": "Coconut Oil, 92 Degrees",
-    "conditioning": "10",
-    "cleansing": "67",
-    "creaminess": "12",
-    "foaming": "67",
-    "hardness": "79",
-    "iodine": "3",
-    "INS": "258"
-  },
-  "lard": {
-    "name": "Lard (Pig Tallow)",
-    "conditioning": "52",
+  "almond-butter": {
+    "name": "Almond Butter",
+    "conditioning": "74",
     "cleansing": "1",
-    "creaminess": "41",
+    "creaminess": "24",
     "foaming": "1",
-    "hardness": "42",
-    "iodine": "57",
-    "INS": "139"
+    "hardness": "25",
+    "INS": "118",
+    "iodine": "70"
   },
-  "shea-butter": {
-    "name": "Shea Butter",
-    "conditioning": "54",
+  "almond-oil": {
+    "name": "Almond Oil",
+    "conditioning": "89",
     "cleansing": "0",
-    "creaminess": "45",
+    "creaminess": "7",
     "foaming": "0",
-    "hardness": "45",
-    "iodine": "59",
-    "INS": "116"
+    "hardness": "7",
+    "INS": "97",
+    "iodine": "99"
+  },
+  "aloe-butter": {
+    "name": "Aloe Butter",
+    "conditioning": "9",
+    "cleansing": "63",
+    "creaminess": "11",
+    "foaming": "63",
+    "hardness": "74",
+    "INS": "241",
+    "iodine": "9"
+  },
+  "apricot-kernel-oil": {
+    "name": "Apricot Kernel Oil",
+    "conditioning": "93",
+    "cleansing": "0",
+    "creaminess": "6",
+    "foaming": "0",
+    "hardness": "6",
+    "INS": "91",
+    "iodine": "100"
+  },
+  "argan-oil": {
+    "name": "Argan Oil",
+    "conditioning": "81",
+    "cleansing": "1",
+    "creaminess": "14",
+    "foaming": "1",
+    "hardness": "15",
+    "INS": "95",
+    "iodine": "95"
+  },
+  "avocado-butter": {
+    "name": "Avocado Butter",
+    "conditioning": "61",
+    "cleansing": "0",
+    "creaminess": "31",
+    "foaming": "0",
+    "hardness": "31",
+    "INS": "120",
+    "iodine": "67"
+  },
+  "avocado-oil": {
+    "name": "Avocado Oil",
+    "conditioning": "70",
+    "cleansing": "0",
+    "creaminess": "22",
+    "foaming": "0",
+    "hardness": "22",
+    "INS": "99",
+    "iodine": "86"
+  },
+  "babassu-oil": {
+    "name": "Babassu Oil",
+    "conditioning": "10",
+    "cleansing": "70",
+    "creaminess": "15",
+    "foaming": "70",
+    "hardness": "85",
+    "INS": "230",
+    "iodine": "15"
+  },
+  "baobab-oil": {
+    "name": "Baobab Oil",
+    "conditioning": "67",
+    "cleansing": "1",
+    "creaminess": "28",
+    "foaming": "1",
+    "hardness": "29",
+    "INS": "125",
+    "iodine": "75"
+  },
+  "beeswax": {
+    "name": "Beeswax",
+    "conditioning": "50",
+    "cleansing": "0",
+    "creaminess": "50",
+    "foaming": "0",
+    "hardness": "90",
+    "INS": "84",
+    "iodine": "10"
+  },
+  "black-cumin-seed-oil": {
+    "name": "Black Cumin Seed Oil",
+    "conditioning": "83",
+    "cleansing": "0",
+    "creaminess": "16",
+    "foaming": "0",
+    "hardness": "16",
+    "INS": "62",
+    "iodine": "133"
+  },
+  "borage-oil": {
+    "name": "Borage Oil",
+    "conditioning": "68",
+    "cleansing": "0",
+    "creaminess": "14",
+    "foaming": "0",
+    "hardness": "14",
+    "INS": "55",
+    "iodine": "135"
+  },
+  "camellia-seed-oil": {
+    "name": "Camellia Seed Oil",
+    "conditioning": "88",
+    "cleansing": "0",
+    "creaminess": "8",
+    "foaming": "0",
+    "hardness": "8",
+    "INS": "44",
+    "iodine": "144"
+  },
+  "canola-oil": {
+    "name": "Canola Oil",
+    "conditioning": "91",
+    "cleansing": "0",
+    "creaminess": "6",
+    "foaming": "0",
+    "hardness": "6",
+    "INS": "56",
+    "iodine": "110"
+  },
+  "capuaca-butter": {
+    "name": "Capuaca Butter",
+    "conditioning": "44",
+    "cleansing": "0",
+    "creaminess": "42",
+    "foaming": "0",
+    "hardness": "42",
+    "INS": "155",
+    "iodine": "38"
   },
   "castor-oil": {
     "name": "Castor Oil",
@@ -46,7 +156,797 @@
     "creaminess": "90",
     "foaming": "90",
     "hardness": "0",
-    "iodine": "86",
-    "INS": "95"
+    "INS": "95",
+    "iodine": "86"
+  },
+  "cherry-kernel-oil-avium": {
+    "name": "Cherry Kernel Oil Avium",
+    "conditioning": "87",
+    "cleansing": "0",
+    "creaminess": "11",
+    "foaming": "0",
+    "hardness": "11",
+    "INS": "62",
+    "iodine": "128"
+  },
+  "chicken-fat": {
+    "name": "Chicken Fat",
+    "conditioning": "59",
+    "cleansing": "1",
+    "creaminess": "32",
+    "foaming": "1",
+    "hardness": "33",
+    "INS": "130",
+    "iodine": "69"
+  },
+  "cocoa-butter": {
+    "name": "Cocoa Butter",
+    "conditioning": "38",
+    "cleansing": "0",
+    "creaminess": "61",
+    "foaming": "0",
+    "hardness": "61",
+    "INS": "157",
+    "iodine": "37"
+  },
+  "coconut-oil-92": {
+    "name": "Coconut Oil (92 Degrees)",
+    "conditioning": "10",
+    "cleansing": "67",
+    "creaminess": "12",
+    "foaming": "67",
+    "hardness": "79",
+    "iodine": "3",
+    "INS": "258"
+  },
+  "coconut-oil-76-degree": {
+    "name": "Coconut Oil (76 Degrees)",
+    "conditioning": "10",
+    "cleansing": "67",
+    "creaminess": "12",
+    "foaming": "67",
+    "hardness": "79",
+    "INS": "258",
+    "iodine": "10"
+  },
+  "coffee-bean-oil": {
+    "name": "Coffee Bean Oil",
+    "conditioning": "50",
+    "cleansing": "0",
+    "creaminess": "46",
+    "foaming": "0",
+    "hardness": "46",
+    "INS": "100",
+    "iodine": "85"
+  },
+  "cohune-oil": {
+    "name": "Cohune Oil",
+    "conditioning": "21",
+    "cleansing": "64",
+    "creaminess": "11",
+    "foaming": "64",
+    "hardness": "75",
+    "INS": "175",
+    "iodine": "30"
+  },
+  "corn-oil": {
+    "name": "Corn Oil",
+    "conditioning": "84",
+    "cleansing": "0",
+    "creaminess": "14",
+    "foaming": "0",
+    "hardness": "14",
+    "INS": "69",
+    "iodine": "117"
+  },
+  "cottonseed-oil": {
+    "name": "Cottonseed Oil",
+    "conditioning": "71",
+    "cleansing": "0",
+    "creaminess": "26",
+    "foaming": "0",
+    "hardness": "26",
+    "INS": "89",
+    "iodine": "108"
+  },
+  "cranberry-seed-oil": {
+    "name": "Cranberry Seed Oil",
+    "conditioning": "92",
+    "cleansing": "0",
+    "creaminess": "8",
+    "foaming": "0",
+    "hardness": "8",
+    "INS": "40",
+    "iodine": "150"
+  },
+  "crisco": {
+    "name": "Crisco",
+    "conditioning": "74",
+    "cleansing": "0",
+    "creaminess": "25",
+    "foaming": "0",
+    "hardness": "25",
+    "INS": "82",
+    "iodine": "111"
+  },
+  "emu-oil": {
+    "name": "Emu Oil",
+    "conditioning": "55",
+    "cleansing": "0",
+    "creaminess": "32",
+    "foaming": "0",
+    "hardness": "32",
+    "INS": "128",
+    "iodine": "60"
+  },
+  "evening-primrose-oil": {
+    "name": "Evening Primrose Oil",
+    "conditioning": "89",
+    "cleansing": "0",
+    "creaminess": "0",
+    "foaming": "0",
+    "hardness": "0",
+    "INS": "30",
+    "iodine": "160"
+  },
+  "flax-linseed-oil": {
+    "name": "Flax/Linseed Oil",
+    "conditioning": "90",
+    "cleansing": "0",
+    "creaminess": "9",
+    "foaming": "0",
+    "hardness": "9",
+    "INS": "-6",
+    "iodine": "180"
+  },
+  "ghee": {
+    "name": "Ghee",
+    "conditioning": "22",
+    "cleansing": "15",
+    "creaminess": "40",
+    "foaming": "15",
+    "hardness": "55",
+    "INS": "191",
+    "iodine": "30"
+  },
+  "grapeseed-oil": {
+    "name": "Grapeseed Oil",
+    "conditioning": "88",
+    "cleansing": "0",
+    "creaminess": "12",
+    "foaming": "0",
+    "hardness": "12",
+    "INS": "66",
+    "iodine": "131"
+  },
+  "hazelnut-oil": {
+    "name": "Hazelnut Oil",
+    "conditioning": "85",
+    "cleansing": "0",
+    "creaminess": "8",
+    "foaming": "0",
+    "hardness": "8",
+    "INS": "94",
+    "iodine": "97"
+  },
+  "hemp-oil": {
+    "name": "Hemp Oil",
+    "conditioning": "90",
+    "cleansing": "0",
+    "creaminess": "8",
+    "foaming": "0",
+    "hardness": "8",
+    "INS": "39",
+    "iodine": "165"
+  },
+  "horse-oil": {
+    "name": "Horse Oil",
+    "conditioning": "49",
+    "cleansing": "3",
+    "creaminess": "31",
+    "foaming": "3",
+    "hardness": "34",
+    "INS": "117",
+    "iodine": "79"
+  },
+  "illipe-butter": {
+    "name": "Illipe Butter",
+    "conditioning": "35",
+    "cleansing": "0",
+    "creaminess": "62",
+    "foaming": "0",
+    "hardness": "62",
+    "INS": "152",
+    "iodine": "33"
+  },
+  "jatropha-oil": {
+    "name": "Jatropha Oil",
+    "conditioning": "78",
+    "cleansing": "0",
+    "creaminess": "16",
+    "foaming": "0",
+    "hardness": "16",
+    "INS": "91",
+    "iodine": "102"
+  },
+  "jojoba-Oil": {
+    "name": "Jojoba Oil",
+    "conditioning": "12",
+    "cleansing": "0",
+    "creaminess": "0",
+    "foaming": "0",
+    "hardness": "0",
+    "INS": "11",
+    "iodine": "83"
+  },
+  "karanja-oil": {
+    "name": "Karanja Oil",
+    "conditioning": "73",
+    "cleansing": "0",
+    "creaminess": "12",
+    "foaming": "0",
+    "hardness": "12",
+    "INS": "98",
+    "iodine": "85"
+  },
+  "kokum-butter": {
+    "name": "Kokum Butter",
+    "conditioning": "37",
+    "cleansing": "0",
+    "creaminess": "60",
+    "foaming": "0",
+    "hardness": "60",
+    "INS": "155",
+    "iodine": "35"
+  },
+  "kpangnan-butter": {
+    "name": "Kpangnan Butter",
+    "conditioning": "50",
+    "cleansing": "0",
+    "creaminess": "50",
+    "foaming": "0",
+    "hardness": "50",
+    "INS": "149",
+    "iodine": "42"
+  },
+  "kukui-nut-oil": {
+    "name": "Kukui Nut Oil",
+    "conditioning": "91",
+    "cleansing": "0",
+    "creaminess": "8",
+    "foaming": "0",
+    "hardness": "8",
+    "INS": "24",
+    "iodine": "168"
+  },
+  "lanolin": {
+    "name": "Lanolin",
+    "conditioning": "0",
+    "cleansing": "0",
+    "creaminess": "0",
+    "foaming": "0",
+    "hardness": "0",
+    "INS": "83",
+    "iodine": "27"
+  },
+  "lard": {
+    "name": "Lard",
+    "conditioning": "52",
+    "cleansing": "1",
+    "creaminess": "41",
+    "foaming": "1",
+    "hardness": "42",
+    "INS": "139",
+    "iodine": "57"
+  },
+  "macadamina-nut-oil": {
+    "name": "Macadamina Nut Oil",
+    "conditioning": "61",
+    "cleansing": "0",
+    "creaminess": "14",
+    "foaming": "0",
+    "hardness": "14",
+    "INS": "119",
+    "iodine": "76"
+  },
+  "mango-seed-butter": {
+    "name": "Mango Seed Butter",
+    "conditioning": "48",
+    "cleansing": "0",
+    "creaminess": "49",
+    "foaming": "0",
+    "hardness": "49",
+    "INS": "146",
+    "iodine": "45"
+  },
+  "mango-seed-oil": {
+    "name": "Mango Seed Oil",
+    "conditioning": "61",
+    "cleansing": "0",
+    "creaminess": "35",
+    "foaming": "0",
+    "hardness": "35",
+    "INS": "130",
+    "iodine": "60"
+  },
+  "marula-oil": {
+    "name": "Marula Oil",
+    "conditioning": "79",
+    "cleansing": "0",
+    "creaminess": "18",
+    "foaming": "0",
+    "hardness": "18",
+    "INS": "119",
+    "iodine": "73"
+  },
+  "meadowfarm-oil": {
+    "name": "Meadowfarm Oil",
+    "conditioning": "95",
+    "cleansing": "5",
+    "creaminess": "0",
+    "foaming": "0",
+    "hardness": "0",
+    "INS": "77",
+    "iodine": "92"
+  },
+  "milk-fat": {
+    "name": "Milk Fat",
+    "conditioning": "22",
+    "cleansing": "15",
+    "creaminess": "40",
+    "foaming": "15",
+    "hardness": "55",
+    "INS": "191",
+    "iodine": "30"
+  },
+  "mink-oil": {
+    "name": "Mink Oil",
+    "conditioning": "0",
+    "cleansing": "0",
+    "creaminess": "0",
+    "foaming": "0",
+    "hardness": "0",
+    "INS": "141",
+    "iodine": "55"
+  },
+  "monoi-de-tahiti-oil": {
+    "name": "Monoi De Tahiti Oil",
+    "conditioning": "2",
+    "cleansing": "60",
+    "creaminess": "13",
+    "foaming": "60",
+    "hardness": "73",
+    "INS": "246",
+    "iodine": "9"
+  },
+  "moringa-oil": {
+    "name": "Moringa Oil",
+    "conditioning": "73",
+    "cleansing": "0",
+    "creaminess": "14",
+    "foaming": "0",
+    "hardness": "14",
+    "INS": "124",
+    "iodine": "68"
+  },
+  "mowrah-butter": {
+    "name": "Mowrah Butter",
+    "conditioning": "51",
+    "cleansing": "0",
+    "creaminess": "46",
+    "foaming": "0",
+    "hardness": "46",
+    "INS": "132",
+    "iodine": "62"
+  },
+  "murumuru-buttter": {
+    "name": "Murumuru Buttter",
+    "conditioning": "18",
+    "cleansing": "73",
+    "creaminess": "9",
+    "foaming": "73",
+    "hardness": "82",
+    "INS": "250",
+    "iodine": "25"
+  },
+  "mustard-oil-kachi-gha": {
+    "name": "Mustard Oil/Kachi Gha",
+    "conditioning": "41",
+    "cleansing": "0",
+    "creaminess": "4",
+    "foaming": "0",
+    "hardness": "4",
+    "INS": "72",
+    "iodine": "101"
+  },
+  "myrstic-acid": {
+    "name": "Myrstic Acid",
+    "conditioning": "0",
+    "cleansing": "99",
+    "creaminess": "0",
+    "foaming": "99",
+    "hardness": "99",
+    "INS": "246",
+    "iodine": "1"
+  },
+  "neem-tree-oil": {
+    "name": "Neem Tree Oil",
+    "conditioning": "63",
+    "cleansing": "0",
+    "creaminess": "33",
+    "foaming": "0",
+    "hardness": "33",
+    "INS": "124",
+    "iodine": "89"
+  },
+  "oleic-acid": {
+    "name": "Oleic Acid",
+    "conditioning": "99",
+    "cleansing": "0",
+    "creaminess": "0",
+    "foaming": "0",
+    "hardness": "0",
+    "INS": "110",
+    "iodine": "92"
+  },
+  "olive-oil": {
+    "name": "Olive Oil",
+    "conditioning": "82",
+    "cleansing": "0",
+    "creaminess": "17",
+    "foaming": "0",
+    "hardness": "17",
+    "INS": "105",
+    "iodine": "85"
+  },
+  "olive-oil-pomace": {
+    "name": "Olive Oil Pomace",
+    "conditioning": "83",
+    "cleansing": "0",
+    "creaminess": "17",
+    "foaming": "0",
+    "hardness": "17",
+    "INS": "104",
+    "iodine": "84"
+  },
+  "ostrich-oil": {
+    "name": "Ostrich Oil",
+    "conditioning": "57",
+    "cleansing": "4",
+    "creaminess": "32",
+    "foaming": "4",
+    "hardness": "36",
+    "INS": "128",
+    "iodine": "97"
+  },
+  "palm-kernel-oil-flakes": {
+    "name": "Palm Kernel Oil Flakes",
+    "conditioning": "18",
+    "cleansing": "61",
+    "creaminess": "9",
+    "foaming": "61",
+    "hardness": "70",
+    "INS": "183",
+    "iodine": "20"
+  },
+  "palm-oil": {
+    "name": "Palm Oil",
+    "conditioning": "49",
+    "cleansing": "1",
+    "creaminess": "49",
+    "foaming": "1",
+    "hardness": "50",
+    "INS": "145",
+    "iodine": "53"
+  },
+  "palm-stearin": {
+    "name": "Palm Stearin",
+    "conditioning": "33",
+    "cleansing": "2",
+    "creaminess": "65",
+    "foaming": "2",
+    "hardness": "67",
+    "INS": "151",
+    "iodine": "48"
+  },
+  "palmitic-acid": {
+    "name": "Palmitic Acid",
+    "conditioning": "0",
+    "cleansing": "0",
+    "creaminess": "98",
+    "foaming": "0",
+    "hardness": "98",
+    "INS": "213",
+    "iodine": "2"
+  },
+  "passion-fruit-seed-oil": {
+    "name": "Passion Fruit Seed Oil",
+    "conditioning": "86",
+    "cleansing": "0",
+    "creaminess": "13",
+    "foaming": "0",
+    "hardness": "13",
+    "INS": "47",
+    "iodine": "136"
+  },
+  "peach-kernel-oil": {
+    "name": "Peach Kernel Oil",
+    "conditioning": "91",
+    "cleansing": "0",
+    "creaminess": "8",
+    "foaming": "0",
+    "hardness": "8",
+    "INS": "87",
+    "iodine": "108"
+  },
+  "peanut-oil": {
+    "name": "Peanut Oil",
+    "conditioning": "82",
+    "cleansing": "0",
+    "creaminess": "11",
+    "foaming": "0",
+    "hardness": "11",
+    "INS": "99",
+    "iodine": "92"
+  },
+  "perilla-seed-oil": {
+    "name": "Perilla Seed Oil",
+    "conditioning": "87",
+    "cleansing": "0",
+    "creaminess": "8",
+    "foaming": "0",
+    "hardness": "8",
+    "INS": "-6",
+    "iodine": "196"
+  },
+  "pistachio-oil": {
+    "name": "Pistachio Oil",
+    "conditioning": "88",
+    "cleansing": "0",
+    "creaminess": "12",
+    "foaming": "0",
+    "hardness": "12",
+    "INS": "92",
+    "iodine": "95"
+  },
+  "plum-kernel-oil": {
+    "name": "Plum Kernel Oil",
+    "conditioning": "91",
+    "cleansing": "0",
+    "creaminess": "3",
+    "foaming": "0",
+    "hardness": "3",
+    "INS": "96",
+    "iodine": "98"
+  },
+  "poppy-seed-oil": {
+    "name": "Poppy Seed Oil",
+    "conditioning": "88",
+    "cleansing": "0",
+    "creaminess": "12",
+    "foaming": "0",
+    "hardness": "12",
+    "INS": "54",
+    "iodine": "140"
+  },
+  "pumpkin-seed-oil": {
+    "name": "Pumpkin Seed Oil",
+    "conditioning": "83",
+    "cleansing": "0",
+    "creaminess": "19",
+    "foaming": "0",
+    "hardness": "19",
+    "INS": "67",
+    "iodine": "128"
+  },
+  "rapeseed-oil": {
+    "name": "Rapeseed Oil",
+    "conditioning": "35",
+    "cleansing": "0",
+    "creaminess": "4",
+    "foaming": "0",
+    "hardness": "4",
+    "INS": "56",
+    "iodine": "108"
+  },
+  "red-palm-butter": {
+    "name": "Red Palm Butter",
+    "conditioning": "49",
+    "cleansing": "1",
+    "creaminess": "49",
+    "foaming": "1",
+    "hardness": "50",
+    "INS": "145",
+    "iodine": "53"
+  },
+  "rice-bran-oil": {
+    "name": "Rice Bran Oil",
+    "conditioning": "69",
+    "cleansing": "1",
+    "creaminess": "25",
+    "foaming": "1",
+    "hardness": "26",
+    "INS": "70",
+    "iodine": "110"
+  },
+  "rose-hip-oil": {
+    "name": "Rose Hip Oil",
+    "conditioning": "89",
+    "cleansing": "0",
+    "creaminess": "6",
+    "foaming": "0",
+    "hardness": "6",
+    "INS": "10",
+    "iodine": "188"
+  },
+  "safflower-oil": {
+    "name": "Safflower Oil",
+    "conditioning": "90",
+    "cleansing": "0",
+    "creaminess": "7",
+    "foaming": "0",
+    "hardness": "7",
+    "INS": "47",
+    "iodine": "145"
+  },
+  "sal-butter": {
+    "name": "Sal Butter",
+    "conditioning": "42",
+    "cleansing": "0",
+    "creaminess": "50",
+    "foaming": "0",
+    "hardness": "50",
+    "INS": "146",
+    "iodine": "39"
+  },
+  "sal-palmetto-oil": {
+    "name": "Sal Palmetto Oil",
+    "conditioning": "36",
+    "cleansing": "42",
+    "creaminess": "11",
+    "foaming": "42",
+    "hardness": "53",
+    "INS": "176",
+    "iodine": "44"
+  },
+  "saw-palmetto-extract": {
+    "name": "Saw Palmetto Extract",
+    "conditioning": "40",
+    "cleansing": "40",
+    "creaminess": "10",
+    "foaming": "40",
+    "hardness": "50",
+    "INS": "185",
+    "iodine": "45"
+  },
+  "sesame-oil": {
+    "name": "Sesame Oil",
+    "conditioning": "83",
+    "cleansing": "0",
+    "creaminess": "15",
+    "foaming": "0",
+    "hardness": "15",
+    "INS": "81",
+    "iodine": "110"
+  },
+  "shea-butter": {
+    "name": "Shea Butter",
+    "conditioning": "54",
+    "cleansing": "0",
+    "creaminess": "45",
+    "foaming": "0",
+    "hardness": "45",
+    "INS": "116",
+    "iodine": "59"
+  },
+  "soybean-oil": {
+    "name": "Soybean Oil",
+    "conditioning": "82",
+    "cleansing": "0",
+    "creaminess": "16",
+    "foaming": "0",
+    "hardness": "16",
+    "INS": "61",
+    "iodine": "131"
+  },
+  "stearic-acid": {
+    "name": "Stearic Acid",
+    "conditioning": "0",
+    "cleansing": "0",
+    "creaminess": "99",
+    "foaming": "0",
+    "hardness": "99",
+    "INS": "196",
+    "iodine": "2"
+  },
+  "sunflower-oil": {
+    "name": "Sunflower Oil",
+    "conditioning": "87",
+    "cleansing": "0",
+    "creaminess": "11",
+    "foaming": "0",
+    "hardness": "11",
+    "INS": "63",
+    "iodine": "133"
+  },
+  "beef-tallow": {
+    "name": "Beef Tallow",
+    "conditioning": "40",
+    "cleansing": "8",
+    "creaminess": "50",
+    "foaming": "8",
+    "hardness": "58",
+    "INS": "147",
+    "iodine": "45"
+  },
+  "sheep-tallow": {
+    "name": "Sheep Tallow",
+    "conditioning": "31",
+    "cleansing": "14",
+    "creaminess": "37",
+    "foaming": "14",
+    "hardness": "51",
+    "INS": "156",
+    "iodine": "54"
+  },
+  "tamanu-oil-kamani": {
+    "name": "Tamanu Oil/Kamani",
+    "conditioning": "73",
+    "cleansing": "0",
+    "creaminess": "25",
+    "foaming": "0",
+    "hardness": "25",
+    "INS": "82",
+    "iodine": "111"
+  },
+  "tucuma-seed-butter": {
+    "name": "Tucuma Seed Butter",
+    "conditioning": "13",
+    "cleansing": "71",
+    "creaminess": "6",
+    "foaming": "71",
+    "hardness": "77",
+    "INS": "175",
+    "iodine": "13"
+  },
+  "ucuuba-butter": {
+    "name": "Ucuuba Butter",
+    "conditioning": "49",
+    "cleansing": "0",
+    "creaminess": "31",
+    "foaming": "0",
+    "hardness": "31",
+    "INS": "167",
+    "iodine": "38"
+  },
+  "walnut-oil": {
+    "name": "Walnut Oil",
+    "conditioning": "78",
+    "cleansing": "0",
+    "creaminess": "9",
+    "foaming": "0",
+    "hardness": "9",
+    "INS": "45",
+    "iodine": "154"
+  },
+  "wheat-germ-oil": {
+    "name": "Wheat Germ Oil",
+    "conditioning": "75",
+    "cleansing": "0",
+    "creaminess": "19",
+    "foaming": "0",
+    "hardness": "19",
+    "INS": "58",
+    "iodine": "128"
+  },
+  "yangu": {
+    "name": "Yangu",
+    "conditioning": "76",
+    "cleansing": "0",
+    "creaminess": "23",
+    "foaming": "0",
+    "hardness": "23",
+    "INS": "97",
+    "iodine": "95"
   }
 }
