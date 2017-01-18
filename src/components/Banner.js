@@ -5,7 +5,7 @@ const Banner = () => {
   return (
     <Jumbotron>
       <Grid>
-        <h1>Soap Calculator</h1>
+        <h1>Make Soap!</h1>
         <p></p>
       </Grid>
     </Jumbotron>

@@ -13,6 +13,10 @@
   .jumbotron {
     min-height: 300px;
   }
+
+  h1 {
+    font-size: 10em !important;
+  }
 }
 
 body {
