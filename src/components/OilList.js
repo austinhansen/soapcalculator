@@ -34,7 +34,7 @@ class OilList extends Component {
       <div>
         <form>
           <FormGroup>
-            <h4>A. Choose Oils</h4>
+            <h4>A. Add Your Oils</h4>
             <hr />
 
             <Select options={options} onChange={this.handleChange} value={this.state.selectedOil.key} clearable={false} />

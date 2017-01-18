@@ -29,6 +29,12 @@ class SoapProperties extends Component {
         <hr />
 
         <Table striped bordered hover>
+          <thead>
+            <tr>
+              <th>Property (recommended values)</th>
+              <th>Value</th>
+            </tr>
+          </thead>
           <tbody>
             <tr>
               <td>Cleansing (12 to 22):</td>
