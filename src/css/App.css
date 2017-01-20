@@ -9,16 +9,6 @@
   overflow: hidden;
 }
 
-@media (min-width: 992px) {
-  .jumbotron {
-    min-height: 300px;
-  }
-
-  h1 {
-    font-size: 10em !important;
-  }
-}
-
 body {
   font-family: 'Raleway', sans-serif !important;
 }
