@@ -91,10 +91,10 @@ class App extends Component {
         <Grid>
           <Row className="show-grid">
             <Col sm={12}>
-              <h2>Step 1: Soap Weight</h2>
+              <h2>Step 1: How much soap do you want to make?</h2>
               <FormGroup>
                 <InputGroup>
-                  <FormControl value={this.state.weight} onChange={this.updateWeight} type="number" />
+                  <FormControl value={this.state.weight} onChange={this.updateWeight} type="number" alt="Soap Weight" />
                   <InputGroup.Addon>g</InputGroup.Addon>
                 </InputGroup>
               </FormGroup>

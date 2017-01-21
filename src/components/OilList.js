@@ -41,6 +41,8 @@ class OilList extends Component {
           </FormGroup>
         </form>
 
+        <Button onClick={this.handleSubmit} bsStyle="primary" block >Add</Button>
+
         <Table striped bordered hover>
           <tbody>
             <tr>
@@ -73,8 +75,6 @@ class OilList extends Component {
             </tr>
           </tbody>
         </Table>
-
-        <Button onClick={this.handleSubmit} bsStyle="primary" block >Add</Button>
       </div>
     );
   }
