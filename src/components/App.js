@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col, FormGroup, InputGroup, FormControl } from 'react-bootstrap';
+import { Grid, Row, Col } from 'react-bootstrap';
 import Banner from './Banner';
 import OilList from './OilList';
 import Soap from './Soap';
+import Weight from './Weight';
 import Recipe from './Recipe';
 import SoapProperties from './SoapProperties';
 import '../css/App.css';
@@ -90,15 +91,7 @@ class App extends Component {
         <Banner />
         <Grid>
           <Row className="show-grid">
-            <Col sm={12}>
-              <h2>Step 1: How much soap do you want to make?</h2>
-              <FormGroup>
-                <InputGroup>
-                  <FormControl value={this.state.weight} onChange={this.updateWeight} type="number" alt="Soap Weight" />
-                  <InputGroup.Addon>g</InputGroup.Addon>
-                </InputGroup>
-              </FormGroup>
-            </Col>
+            <Weight weight={this.state.weight} updateWeight={this.updateWeight} type="number" alt="Soap Weight" />
           </Row>
 
           <hr />
