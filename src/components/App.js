@@ -34,6 +34,7 @@ class App extends Component {
   componentWillUpdate(nextProps, nextState) {
     localStorage.setItem(`soap`, JSON.stringify(nextState.soap));
     localStorage.setItem(`weight`, JSON.stringify(nextState.weight));
+    localStorage.setItem(`selectedMass`, JSON.stringify(nextState.selectedMass));
   }
 
   componentWillMount() {
@@ -44,6 +45,7 @@ class App extends Component {
 
     const localStorageSoap = localStorage.getItem(`soap`);
     const localStorageWeight = localStorage.getItem(`weight`);
+    const localStorageSelectedMass = localStorage.getItem(`selectedMass`);
 
     if(localStorageSoap) {
       this.setState({
@@ -54,6 +56,12 @@ class App extends Component {
     if(localStorageWeight) {
       this.setState({
         weight: JSON.parse(localStorageWeight)
+      });
+    }
+
+    if(localStorageSelectedMass) {
+      this.setState({
+        selectedMass: JSON.parse(localStorageSelectedMass)
       });
     }
   }
