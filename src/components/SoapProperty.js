@@ -29,9 +29,9 @@ class SoapProperty extends Component {
     const description = `${this.props.description} (${low} to ${high}):`;
 
     return (
-      <tr className={className} >
+      <tr>
         <td>{description}</td>
-        <td>{soapProperty}</td>
+        <td className={className} >{soapProperty}</td>
       </tr>
     );
   }
