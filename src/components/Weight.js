@@ -35,7 +35,6 @@ class Weight extends Component {
     return (
       <Col sm={12}>
         <h2>Step 1: How much soap do you want to make?</h2>
-        {weightTip}
         <FormGroup>
           <InputGroup>
             <FormControl value={this.props.weight} onChange={(e) => this.props.updateWeight(e)} type="number" alt="Soap Weight" placeholder={barWeight} />
@@ -43,6 +42,7 @@ class Weight extends Component {
             <MassButton selectedselectedMass={this.props.selectedMass.type} handleClick={(e) => this.handleClick(e)} selectedMassName='oz'/>
           </InputGroup>
         </FormGroup>
+        {weightTip}
       </Col>
     );
   }
