@@ -22,6 +22,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "deploy": "npm run build && surge ~/code/soapcalculator/build/ https://makesoap.co",
     "eject": "react-scripts eject",
     "lint": "eslint src --ext .js"
   }

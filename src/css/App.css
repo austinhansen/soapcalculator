@@ -23,6 +23,11 @@ h1 {
   color: #FFF !important;
 }
 
+.good-soap-property {
+  background-color: #dff0d8 !important;
+  color: #468847;
+}
+
 /* Animations */
 
 .ingredient-enter {

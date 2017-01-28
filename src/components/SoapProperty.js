@@ -22,10 +22,16 @@ class SoapProperty extends Component {
   }
 
   render() {
+    const low = this.props.lowIdealValue;
+    const high = this.props.highIdealValue;
+    const soapProperty = this.soapProperty(this.props.property);
+    const className = soapProperty >= low && soapProperty <= high ? "good-soap-property" : "";
+    const description = `${this.props.description} (${low} to ${high}):`;
+
     return (
-      <tr>
-        <td>{this.props.description}</td>
-        <td>{this.soapProperty(this.props.property)}</td>
+      <tr className={className} >
+        <td>{description}</td>
+        <td>{soapProperty}</td>
       </tr>
     );
   }
