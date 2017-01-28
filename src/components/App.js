@@ -68,9 +68,10 @@ class App extends Component {
 
   updateWeight = (event) =>  {
     const weight = event.target.value;
+    const newWeight = weight >= 0 ? weight : 0;
 
     this.setState({
-      weight: weight
+      weight: newWeight
     });
   }
 
