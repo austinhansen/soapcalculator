@@ -27,22 +27,18 @@ h1 {
 
 .ingredient-enter {
   opacity: 0;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-60%);
 }
 .ingredient-enter.ingredient-enter-active {
   opacity: 1;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  transform: translateY(0%);
+  transition: transform 200ms, opacity 100ms linear;
 }
-
 .ingredient-leave {
-  opacity: 1;
+  transform: translateY(0%);
 }
-
 .ingredient-leave.ingredient-leave-active {
+  transform: translateY(-100%);
   opacity: 0;
-  transition: opacity .2s ease-out;
+  transition: transform 200ms, opacity 100ms linear;
 }
