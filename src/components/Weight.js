@@ -6,7 +6,7 @@ class Weight extends Component {
 
   massConversion(massType) {
     if (massType === "g") {
-      return 1;
+      return "1";
     } else if (massType === "oz") {
       return "0.035274";
     }
@@ -23,7 +23,7 @@ class Weight extends Component {
     const conversion = this.props.selectedMass.conversion;
     const massType = this.props.selectedMass.type;
     const barWeight = Math.round(conversion * 156);
-    const totalWeight = Math.round(conversion * 1248)
+    const totalWeight = Math.round(conversion * 1248);
 
     if (this.props.weight >= 0) {
       weightTip = <p>
