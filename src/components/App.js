@@ -16,8 +16,10 @@ class App extends Component {
 
     this.state = {
       oils: {},
-      soap: {},
-      weight: "156",
+      soap: {
+        weight: "156",
+        ingredients: {}
+      },
       selectedMass: {
         type: "g",
         conversion: "1"
@@ -44,18 +46,11 @@ class App extends Component {
     });
 
     const localStorageSoap = localStorage.getItem(`soap`);
-    const localStorageWeight = localStorage.getItem(`weight`);
     const localStorageSelectedMass = localStorage.getItem(`selectedMass`);
 
     if(localStorageSoap) {
       this.setState({
         soap: JSON.parse(localStorageSoap)
-      });
-    }
-
-    if(localStorageWeight) {
-      this.setState({
-        weight: JSON.parse(localStorageWeight)
       });
     }
 
@@ -67,12 +62,12 @@ class App extends Component {
   }
 
   updateWeight = (event) =>  {
+    let newSoap = this.state.soap;
     const weight = event.target.value;
     const newWeight = weight >= 0 ? weight : 0;
+    newSoap.weight = newWeight;
 
-    this.setState({
-      weight: newWeight
-    });
+    this.setState({soap: newSoap});
   }
 
   updateSelectedMass = (massType, conversion) =>  {
@@ -86,7 +81,7 @@ class App extends Component {
   updateIngredientPercentage(key, value) {
     const soap = this.state.soap;
     const percentage = value >= 0 ? value : 0;
-    soap[key]['value'] = percentage;
+    soap.ingredients[key]['value'] = percentage;
 
     this.setState({
       soap: soap
@@ -98,14 +93,14 @@ class App extends Component {
       const soap = this.state.soap;
       let ingredient = this.state.oils[key];
       ingredient.value = "0";
-      soap[key] = ingredient;
+      soap.ingredients[key] = ingredient;
       this.setState({ soap });
     }
   }
 
   removeFromSoap(key) {
     const soap = this.state.soap;
-    delete soap[key];
+    delete soap.ingredients[key];
     this.setState({ soap });
   }
 
@@ -115,7 +110,7 @@ class App extends Component {
         <Banner />
         <Grid>
           <Row className="show-grid">
-            <Weight weight={this.state.weight} updateWeight={this.updateWeight} selectedMass={this.state.selectedMass} updateSelectedMass={this.updateSelectedMass} type="number" alt="Soap Weight" />
+            <Weight weight={this.state.soap.weight} updateWeight={this.updateWeight} selectedMass={this.state.selectedMass} updateSelectedMass={this.updateSelectedMass} type="number" alt="Soap Weight" />
           </Row>
 
           <hr />
@@ -127,11 +122,11 @@ class App extends Component {
             </Col>
 
             <Col sm={4}>
-              <Soap soap={this.state.soap} weight={this.state.weight} removeFromSoap={this.removeFromSoap} updateIngredientPercentage={this.updateIngredientPercentage} />
+              <Soap soap={this.state.soap.ingredients} weight={this.state.soap.weight} removeFromSoap={this.removeFromSoap} updateIngredientPercentage={this.updateIngredientPercentage} />
             </Col>
 
             <Col sm={4}>
-              <SoapProperties soap={this.state.soap} />
+              <SoapProperties soap={this.state.soap.ingredients} />
             </Col>
           </Row>
 
@@ -140,7 +135,7 @@ class App extends Component {
           <Row>
             <Col sm={6}>
               <h2>Step 3: Your Soap Recipe</h2>
-              <Recipe soap={this.state.soap} selectedMass={this.state.selectedMass} weight={this.state.weight} oils={this.state.oils} />
+              <Recipe soap={this.state.soap.ingredients} selectedMass={this.state.selectedMass} weight={this.state.soap.weight} oils={this.state.oils} />
             </Col>
           </Row>
         </Grid>
