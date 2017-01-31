@@ -5,6 +5,7 @@ import OilList from './OilList';
 import Soap from './Soap';
 import Weight from './Weight';
 import Recipe from './Recipe';
+import OptionalSettings from './OptionalSettings';
 import SoapProperties from './SoapProperties';
 import '../css/App.css';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -18,6 +19,7 @@ class App extends Component {
       oils: {},
       soap: {
         weight: "156",
+        waterPercentage: "30",
         ingredients: {}
       },
       selectedMass: {
@@ -30,12 +32,12 @@ class App extends Component {
     this.removeFromSoap = this.removeFromSoap.bind(this);
     this.updateWeight = this.updateWeight.bind(this);
     this.updateIngredientPercentage = this.updateIngredientPercentage.bind(this);
+    this.updateWaterPercentage = this.updateWaterPercentage.bind(this);
     this.updateSelectedMass = this.updateSelectedMass.bind(this);
   }
 
   componentWillUpdate(nextProps, nextState) {
     localStorage.setItem(`soap`, JSON.stringify(nextState.soap));
-    localStorage.setItem(`weight`, JSON.stringify(nextState.weight));
     localStorage.setItem(`selectedMass`, JSON.stringify(nextState.selectedMass));
   }
 
@@ -88,6 +90,16 @@ class App extends Component {
     });
   }
 
+  updateWaterPercentage(value) {
+    const soap = this.state.soap;
+    const percentage = value >= 0 ? value : 0;
+    soap.waterPercentage = percentage;
+
+    this.setState({
+      soap: soap
+    });
+  }
+
   addToSoap(key) {
     if(key) {
       const soap = this.state.soap;
@@ -113,6 +125,10 @@ class App extends Component {
             <Weight weight={this.state.soap.weight} updateWeight={this.updateWeight} selectedMass={this.state.selectedMass} updateSelectedMass={this.updateSelectedMass} type="number" alt="Soap Weight" />
           </Row>
 
+          <Row className="show-grid">
+            <OptionalSettings soap={this.state.soap} updateWaterPercentage={this.updateWaterPercentage} />
+          </Row>
+
           <hr />
 
           <h2>Step 2: Soap Composition</h2>
@@ -135,7 +151,7 @@ class App extends Component {
           <Row>
             <Col sm={6}>
               <h2>Step 3: Your Soap Recipe</h2>
-              <Recipe soap={this.state.soap.ingredients} selectedMass={this.state.selectedMass} weight={this.state.soap.weight} oils={this.state.oils} />
+              <Recipe soap={this.state.soap} selectedMass={this.state.selectedMass} weight={this.state.soap.weight} oils={this.state.oils} />
             </Col>
           </Row>
         </Grid>

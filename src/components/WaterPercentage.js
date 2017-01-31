@@ -1,0 +1,23 @@
+import React, { Component } from "react";
+import { InputGroup, ControlLabel, FormControl, FormGroup } from "react-bootstrap";
+
+class WaterPercentage extends Component {
+  handleChange = (event) =>  {
+    this.props.updateWaterPercentage(event.target.value)
+  }
+
+  render() {
+    return (
+      <div>
+        <ControlLabel>Water %</ControlLabel>
+        <FormGroup>
+          <InputGroup>
+            <FormControl value={this.props.waterPercentage} onChange={this.handleChange} type="number" alt="Soap Weight" placeholder="30" />
+          </InputGroup>
+        </FormGroup>
+      </div>
+    );
+  }
+}
+
+export default WaterPercentage;

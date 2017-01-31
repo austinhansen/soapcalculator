@@ -8,7 +8,7 @@
     "hardness": "25",
     "INS": "118",
     "iodine": "70",
-    "saponification": "0.1341"
+    "saponification": "0.1340"
   },
   "almond-oil": {
     "name": "Almond Oil",
@@ -206,7 +206,7 @@
     "hardness": "79",
     "iodine": "3",
     "INS": "258",
-    "saponification": "0.1910"
+    "saponification": "0.1830"
   },
   "coconut-oil-76-degree": {
     "name": "Coconut Oil (76 Degrees)",
@@ -217,7 +217,7 @@
     "hardness": "79",
     "INS": "258",
     "iodine": "10",
-    "saponification": "0.1910"
+    "saponification": "0.1830"
   },
   "coffee-bean-oil": {
     "name": "Coffee Bean Oil",
