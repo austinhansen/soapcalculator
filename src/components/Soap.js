@@ -13,7 +13,7 @@ class Soap extends Component {
 
     return (
       <div>
-        <h4>B. Choose Oil Percentages</h4>
+        <h4>B. Choose Your Oil Percentages</h4>
         <hr />
         <FormGroup>
           <CSSTransitionGroup

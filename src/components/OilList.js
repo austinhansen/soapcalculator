@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, FormGroup, Table } from 'react-bootstrap';
+import { Col, Button, FormGroup, Table } from 'react-bootstrap';
 import Select from 'react-select';
 
 class OilList extends Component {
@@ -32,49 +32,56 @@ class OilList extends Component {
 
     return (
       <div>
-        <form>
-          <FormGroup>
-            <h4>A. Add Your Oils</h4>
-            <hr />
+        <Col sm={4}>
+          <form>
+            <FormGroup>
+              <h4>A. Add Your Oils</h4>
+              <hr />
 
-            <Select options={options} onChange={this.handleChange} value={this.state.selectedOil.key} clearable={false} />
-          </FormGroup>
-        </form>
+              <Select options={options} onChange={this.handleChange} value={this.state.selectedOil.key} clearable={false} />
+            </FormGroup>
+          </form>
 
-        <Table striped bordered hover>
-          <tbody>
-            <tr>
-              <td>Cleansing:</td>
-              <td>{this.state.selectedOil.cleansing || ''}</td>
-            </tr>
-            <tr>
-              <td>Conditioning:</td>
-              <td>{this.state.selectedOil.conditioning || ''}</td>
-            </tr>
-            <tr>
-              <td>Creaminess:</td>
-              <td>{this.state.selectedOil.creaminess || ''}</td>
-            </tr>
-            <tr>
-              <td>Foaming:</td>
-              <td>{this.state.selectedOil.foaming || ''}</td>
-            </tr>
-            <tr>
-              <td>Hardness:</td>
-              <td>{this.state.selectedOil.hardness || ''}</td>
-            </tr>
-            <tr>
-              <td>Iodine:</td>
-              <td>{this.state.selectedOil.iodine || ''}</td>
-            </tr>
-            <tr>
-              <td>INS:</td>
-              <td>{this.state.selectedOil.INS || ''}</td>
-            </tr>
-          </tbody>
-        </Table>
+          <Button onClick={this.handleSubmit} bsStyle="primary" block >Add</Button>
+        </Col>
 
-        <Button onClick={this.handleSubmit} bsStyle="primary" block >Add</Button>
+        <Col sm={4}>
+          <h4>Selected Oil Properties</h4>
+          <hr />
+
+          <Table striped bordered hover condensed>
+            <tbody>
+              <tr>
+                <td>Cleansing:</td>
+                <td>{this.state.selectedOil.cleansing || ''}</td>
+              </tr>
+              <tr>
+                <td>Conditioning:</td>
+                <td>{this.state.selectedOil.conditioning || ''}</td>
+              </tr>
+              <tr>
+                <td>Creaminess:</td>
+                <td>{this.state.selectedOil.creaminess || ''}</td>
+              </tr>
+              <tr>
+                <td>Foaming:</td>
+                <td>{this.state.selectedOil.foaming || ''}</td>
+              </tr>
+              <tr>
+                <td>Hardness:</td>
+                <td>{this.state.selectedOil.hardness || ''}</td>
+              </tr>
+              <tr>
+                <td>Iodine:</td>
+                <td>{this.state.selectedOil.iodine || ''}</td>
+              </tr>
+              <tr>
+                <td>INS:</td>
+                <td>{this.state.selectedOil.INS || ''}</td>
+              </tr>
+            </tbody>
+          </Table>
+        </Col>
       </div>
     );
   }

@@ -6,7 +6,7 @@ class SoapProperties extends Component {
   render() {
     return (
       <div>
-        <h4>Properties</h4>
+        <h4>Final Properties</h4>
         <hr />
 
         <Table striped bordered hover condensed>

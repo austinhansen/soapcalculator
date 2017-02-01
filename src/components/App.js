@@ -144,11 +144,9 @@ class App extends Component {
 
           <h2>Step 2: Soap Composition</h2>
           <Row className="show-grid">
-            <Col sm={6}>
-              <OilList oils={this.state.oils} addToSoap={this.addToSoap} />
-            </Col>
+            <OilList oils={this.state.oils} addToSoap={this.addToSoap} />
 
-            <Col sm={6}>
+            <Col sm={4}>
               <Soap soap={this.state.soap.ingredients} weight={this.state.soap.weight} removeFromSoap={this.removeFromSoap} updateIngredientPercentage={this.updateIngredientPercentage} />
             </Col>
 
