@@ -49,6 +49,9 @@ class Recipe extends Component {
 
     return (
       <div>
+        <h4>Recipe</h4>
+        <hr />
+
         <Table striped bordered condensed hover>
           <thead>
             <tr>
