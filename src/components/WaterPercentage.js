@@ -12,7 +12,7 @@ class WaterPercentage extends Component {
         <ControlLabel>Water %</ControlLabel>
         <FormGroup>
           <InputGroup>
-            <FormControl value={this.props.waterPercentage} onChange={this.handleChange} type="number" alt="Soap Weight" placeholder="30" />
+            <FormControl value={this.props.waterPercentage} onChange={this.handleChange} type="number" alt="Water Percentage" placeholder="30" />
           </InputGroup>
         </FormGroup>
       </div>

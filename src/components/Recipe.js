@@ -28,6 +28,7 @@ class Recipe extends Component {
     const oils = {...this.props.oils};
     const weight = this.props.weight;
     const conversion = this.props.selectedMass.conversion;
+    const superFat = 1 - (this.props.soap.superFat / 100);
 
     const saponificationValue = soapIds.reduce((prevValue, key) => {
       const percentage = soap[key].value;
@@ -37,7 +38,7 @@ class Recipe extends Component {
       return prevValue;
     }, 0);
 
-    return (saponificationValue * conversion).toFixed(2);
+    return (saponificationValue * superFat * conversion).toFixed(2);
   }
 
   render() {

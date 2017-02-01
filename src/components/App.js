@@ -18,9 +18,10 @@ class App extends Component {
     this.state = {
       oils: {},
       soap: {
-        weight: "156",
+        ingredients: {},
+        superFat: "5",
         waterPercentage: "30",
-        ingredients: {}
+        weight: "156"
       },
       selectedMass: {
         type: "g",
@@ -34,6 +35,7 @@ class App extends Component {
     this.updateIngredientPercentage = this.updateIngredientPercentage.bind(this);
     this.updateWaterPercentage = this.updateWaterPercentage.bind(this);
     this.updateSelectedMass = this.updateSelectedMass.bind(this);
+    this.updateSuperFat = this.updateSuperFat.bind(this);
   }
 
   componentWillUpdate(nextProps, nextState) {
@@ -100,6 +102,12 @@ class App extends Component {
     });
   }
 
+  updateSuperFat(superFatValue) {
+    const soap = this.state.soap;
+    soap.superFat = superFatValue;
+    this.setState({ soap });
+  }
+
   addToSoap(key) {
     if(key) {
       const soap = this.state.soap;
@@ -126,7 +134,7 @@ class App extends Component {
           </Row>
 
           <Row className="show-grid">
-            <OptionalSettings soap={this.state.soap} updateWaterPercentage={this.updateWaterPercentage} />
+            <OptionalSettings soap={this.state.soap} updateWaterPercentage={this.updateWaterPercentage} updateSuperFat={this.updateSuperFat} />
           </Row>
 
           <hr />
