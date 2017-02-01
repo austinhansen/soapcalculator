@@ -33,7 +33,7 @@ class Weight extends Component {
     }
 
     return (
-      <Col sm={12}>
+      <Col sm={8}>
         <h2>Step 1: How much soap do you want to make?</h2>
         <FormGroup>
           <InputGroup>

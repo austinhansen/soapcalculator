@@ -9,10 +9,11 @@ class WaterPercentage extends Component {
   render() {
     return (
       <div>
-        <ControlLabel>Water %</ControlLabel>
+        <ControlLabel>Water</ControlLabel>
         <FormGroup>
           <InputGroup>
             <FormControl value={this.props.waterPercentage} onChange={this.handleChange} type="number" alt="Water Percentage" placeholder="30" />
+            <InputGroup.Addon>%</InputGroup.Addon>
           </InputGroup>
         </FormGroup>
       </div>

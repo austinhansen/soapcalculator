@@ -5,7 +5,7 @@ import OilList from './OilList';
 import Soap from './Soap';
 import Weight from './Weight';
 import Recipe from './Recipe';
-import OptionalSettings from './OptionalSettings';
+import OptionalProperties from './OptionalProperties';
 import SoapProperties from './SoapProperties';
 import '../css/App.css';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -134,7 +134,7 @@ class App extends Component {
           </Row>
 
           <Row className="show-grid">
-            <OptionalSettings soap={this.state.soap} updateWaterPercentage={this.updateWaterPercentage} updateSuperFat={this.updateSuperFat} />
+            <OptionalProperties soap={this.state.soap} updateWaterPercentage={this.updateWaterPercentage} updateSuperFat={this.updateSuperFat} />
           </Row>
 
           <hr />
