@@ -53,9 +53,12 @@ class App extends Component {
     const localStorageSelectedMass = localStorage.getItem(`selectedMass`);
 
     if(localStorageSoap) {
-      this.setState({
-        soap: JSON.parse(localStorageSoap)
-      });
+      const soap = JSON.parse(localStorageSoap);
+      if (soap.ingredients && soap.superFat && soap.waterPercentage && soap.weight) {
+        this.setState({
+          soap: soap
+        });
+      }
     }
 
     if(localStorageSelectedMass) {
