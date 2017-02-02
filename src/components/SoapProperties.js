@@ -31,4 +31,8 @@ class SoapProperties extends Component {
   }
 }
 
+SoapProperties.propTypes = {
+  soap: React.PropTypes.object
+};
+
 export default SoapProperties;

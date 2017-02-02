@@ -24,4 +24,11 @@ class Ingredient extends Component {
   }
 }
 
+Ingredient.propTypes = {
+  index: React.PropTypes.string,
+  details: React.PropTypes.object,
+  removeFromSoap: React.PropTypes.func,
+  updateIngredientPercentage: React.PropTypes.func
+};
+
 export default Ingredient;

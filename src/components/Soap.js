@@ -51,4 +51,10 @@ class Soap extends Component {
   }
 }
 
+Soap.propTypes = {
+  soap: React.PropTypes.object,
+  removeFromSoap: React.PropTypes.func,
+  updateIngredientPercentage: React.PropTypes.func
+};
+
 export default Soap;

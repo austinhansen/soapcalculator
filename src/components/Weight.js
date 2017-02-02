@@ -38,8 +38,8 @@ class Weight extends Component {
         <FormGroup>
           <InputGroup>
             <FormControl value={this.props.weight} onChange={(e) => this.props.updateWeight(e)} type="number" alt="Soap Weight" placeholder={barWeight} />
-            <MassButton selectedselectedMass={this.props.selectedMass.type} handleClick={(e) => this.handleClick(e)} selectedMassName='g'/>
-            <MassButton selectedselectedMass={this.props.selectedMass.type} handleClick={(e) => this.handleClick(e)} selectedMassName='oz'/>
+            <MassButton selectedMassType={this.props.selectedMass.type} handleClick={(e) => this.handleClick(e)} selectedMassName='g'/>
+            <MassButton selectedMassType={this.props.selectedMass.type} handleClick={(e) => this.handleClick(e)} selectedMassName='oz'/>
           </InputGroup>
         </FormGroup>
         {weightTip}
@@ -47,5 +47,12 @@ class Weight extends Component {
     );
   }
 }
+
+Weight.propTypes = {
+  selectedMass: React.PropTypes.object,
+  updateSelectedMass: React.PropTypes.func,
+  weight: React.PropTypes.string,
+  updateWeight: React.PropTypes.func
+};
 
 export default Weight;

@@ -87,4 +87,9 @@ class OilList extends Component {
   }
 }
 
+OilList.propTypes = {
+  oils: React.PropTypes.object,
+  addToSoap: React.PropTypes.func
+};
+
 export default OilList;
