@@ -22,12 +22,13 @@ class Weight extends Component {
     var weightTip = "";
     const conversion = this.props.selectedMass.conversion;
     const massType = this.props.selectedMass.type;
+    const barCount = Math.floor(this.props.weight / (156 * conversion));
     const barWeight = Math.round(conversion * 156);
     const totalWeight = Math.round(conversion * 1248);
 
     if (this.props.weight >= 0) {
       weightTip = <p>
-                    A bar of soap is roughly {`${barWeight} ${massType}`}. Your recipe will make ~{Math.floor(this.props.weight / 156)} bars of soap. <br/>
+                    A bar of soap is roughly {`${barWeight} ${massType}`}. Your recipe will make ~{barCount} bars of soap. <br/>
                     We recommend making enough for 8 bars at a time ({totalWeight} {massType}), which will fit into a <a href="https://www.amazon.ca/Crafters-Choice-1501-Regular-Silicone/dp/B0083ID7CE" target="_blank">Crafter's Choice 1501 mold</a>.
                   </p>;
     }
