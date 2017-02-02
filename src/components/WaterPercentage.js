@@ -22,7 +22,7 @@ class WaterPercentage extends Component {
 }
 
 WaterPercentage.propTypes = {
-  waterPercentage: React.PropTypes.string,
+  waterPercentage: React.PropTypes.number,
   updateWaterPercentage: React.PropTypes.func
 };
 

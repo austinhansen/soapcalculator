@@ -22,7 +22,7 @@ class SuperFat extends Component {
 }
 
 SuperFat.propTypes = {
-  superFat: React.PropTypes.string,
+  superFat: React.PropTypes.number,
   updateSuperFat: React.PropTypes.func
 };
 

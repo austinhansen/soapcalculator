@@ -88,7 +88,7 @@ class Recipe extends Component {
 Recipe.propTypes = {
   oils: React.PropTypes.object,
   soap: React.PropTypes.object,
-  weight: React.PropTypes.string,
+  weight: React.PropTypes.number,
   selectedMass: React.PropTypes.object
 };
 

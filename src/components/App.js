@@ -19,13 +19,13 @@ class App extends Component {
       oils: {},
       soap: {
         ingredients: {},
-        superFat: "5",
-        waterPercentage: "30",
-        weight: "156"
+        superFat: 5,
+        waterPercentage: 30,
+        weight: 156
       },
       selectedMass: {
         type: "g",
-        conversion: "1"
+        conversion: 1
       }
     };
 

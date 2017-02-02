@@ -6,9 +6,9 @@ class Weight extends Component {
 
   massConversion(massType) {
     if (massType === "g") {
-      return "1";
+      return 1;
     } else if (massType === "oz") {
-      return "0.035274";
+      return 0.035274;
     }
   }
 
@@ -51,7 +51,7 @@ class Weight extends Component {
 Weight.propTypes = {
   selectedMass: React.PropTypes.object,
   updateSelectedMass: React.PropTypes.func,
-  weight: React.PropTypes.string,
+  weight: React.PropTypes.number,
   updateWeight: React.PropTypes.func
 };
 
