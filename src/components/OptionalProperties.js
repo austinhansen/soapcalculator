@@ -33,9 +33,9 @@ class OptionalProperties extends Component {
 }
 
 OptionalProperties.propTypes = {
-  soap: React.PropTypes.object,
-  updateWaterPercentage: React.PropTypes.func,
-  updateSuperFat: React.PropTypes.func
+  soap: React.PropTypes.object.isRequired,
+  updateWaterPercentage: React.PropTypes.func.isRequired,
+  updateSuperFat: React.PropTypes.func.isRequired
 };
 
 export default OptionalProperties;

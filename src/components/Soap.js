@@ -52,9 +52,9 @@ class Soap extends Component {
 }
 
 Soap.propTypes = {
-  soap: React.PropTypes.object,
-  removeFromSoap: React.PropTypes.func,
-  updateIngredientPercentage: React.PropTypes.func
+  soap: React.PropTypes.object.isRequired,
+  removeFromSoap: React.PropTypes.func.isRequired,
+  updateIngredientPercentage: React.PropTypes.func.isRequired
 };
 
 export default Soap;

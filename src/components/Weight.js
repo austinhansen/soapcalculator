@@ -50,10 +50,10 @@ class Weight extends Component {
 }
 
 Weight.propTypes = {
-  selectedMass: React.PropTypes.object,
-  updateSelectedMass: React.PropTypes.func,
-  weight: React.PropTypes.number,
-  updateWeight: React.PropTypes.func
+  selectedMass: React.PropTypes.object.isRequired,
+  updateSelectedMass: React.PropTypes.func.isRequired,
+  weight: React.PropTypes.number.isRequired,
+  updateWeight: React.PropTypes.func.isRequired
 };
 
 export default Weight;

@@ -12,9 +12,9 @@ class MassButton extends Component {
 }
 
 MassButton.propTypes = {
-  selectedMassName: React.PropTypes.string,
-  selectedMassType: React.PropTypes.string,
-  handleClick: React.PropTypes.func
+  selectedMassName: React.PropTypes.string.isRequired,
+  selectedMassType: React.PropTypes.string.isRequired,
+  handleClick: React.PropTypes.func.isRequired
 };
 
 export default MassButton;

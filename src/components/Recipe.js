@@ -86,10 +86,10 @@ class Recipe extends Component {
 }
 
 Recipe.propTypes = {
-  oils: React.PropTypes.object,
-  soap: React.PropTypes.object,
-  weight: React.PropTypes.number,
-  selectedMass: React.PropTypes.object
+  oils: React.PropTypes.object.isRequired,
+  soap: React.PropTypes.object.isRequired,
+  weight: React.PropTypes.number.isRequired,
+  selectedMass: React.PropTypes.object.isRequired
 };
 
 export default Recipe;

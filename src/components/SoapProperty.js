@@ -38,11 +38,11 @@ class SoapProperty extends Component {
 }
 
 SoapProperty.propTypes = {
-  soap: React.PropTypes.object,
-  lowIdealValue: React.PropTypes.number,
-  highIdealValue: React.PropTypes.number,
-  property: React.PropTypes.string,
-  description: React.PropTypes.string
+  soap: React.PropTypes.object.isRequired,
+  lowIdealValue: React.PropTypes.number.isRequired,
+  highIdealValue: React.PropTypes.number.isRequired,
+  property: React.PropTypes.string.isRequired,
+  description: React.PropTypes.string.isRequired
 };
 
 export default SoapProperty;

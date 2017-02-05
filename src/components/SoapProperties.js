@@ -32,7 +32,7 @@ class SoapProperties extends Component {
 }
 
 SoapProperties.propTypes = {
-  soap: React.PropTypes.object
+  soap: React.PropTypes.object.isRequired
 };
 
 export default SoapProperties;
