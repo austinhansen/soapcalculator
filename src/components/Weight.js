@@ -3,6 +3,17 @@ import { Col, FormGroup, InputGroup, FormControl } from "react-bootstrap";
 import MassButton from "./MassButton";
 
 class Weight extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      weights: {
+        bar: 99.25,
+        barFormatted: 99,
+        total: 794
+      }
+    };
+  }
 
   massConversion(massType) {
     if (massType === "g") {
@@ -12,19 +23,41 @@ class Weight extends Component {
     }
   }
 
+  updateWeights(massType) {
+    const totals = {
+      g: {
+        bar: 99.25,
+        barFormatted: 99,
+        total: 794
+      },
+      oz: {
+        bar: 3.5,
+        barFormatted: 3.5,
+        total: 28
+      }
+    };
+
+    var newWeights = this.state.weights;
+    newWeights = totals[massType];
+
+    this.setState({
+      weights: newWeights
+    });
+  }
+
   handleClick(event) {
     const selectedMass = event.target.innerText;
     const selectedMassConversion = this.massConversion(selectedMass);
+    this.updateWeights(selectedMass);
     this.props.updateSelectedMass(selectedMass, selectedMassConversion);
   }
 
   render() {
     var weightTip = "";
-    const conversion = this.props.selectedMass.conversion;
     const massType = this.props.selectedMass.type;
-    const barCount = Math.floor(this.props.weight / (156 * conversion));
-    const barWeight = Math.round(conversion * 156);
-    const totalWeight = Math.round(conversion * 1248);
+    const barWeight = this.state.weights.barFormatted;
+    const barCount = Math.floor(this.props.weight / this.state.weights.bar);
+    const totalWeight = Math.round(this.state.weights.total);
 
     if (this.props.weight >= 0) {
       weightTip = <p>

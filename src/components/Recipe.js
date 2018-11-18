@@ -11,15 +11,13 @@ class Recipe extends Component {
 
   oilWeight(oil) {
     const oilWeight = oil * this.props.weight / 100 || 0;
-    const conversion = this.props.selectedMass.conversion;
-    return (oilWeight * conversion).toFixed(2);
+    return (oilWeight).toFixed(2);
   }
 
   waterWeight() {
     const weight = this.props.weight;
     const waterPercentage = this.props.soap.waterPercentage;
-    const conversion = this.props.selectedMass.conversion;
-    return (weight * waterPercentage * conversion / 100).toFixed(2);
+    return (weight * waterPercentage / 100).toFixed(2);
   }
 
   lyePercentage() {
@@ -27,7 +25,6 @@ class Recipe extends Component {
     const soapIds = Object.keys(soap);
     const oils = {...this.props.oils};
     const weight = this.props.weight;
-    const conversion = this.props.selectedMass.conversion;
     const superFat = 1 - (this.props.soap.superFat / 100);
 
     const saponificationValue = soapIds.reduce((prevValue, key) => {
@@ -38,7 +35,7 @@ class Recipe extends Component {
       return prevValue;
     }, 0);
 
-    return (saponificationValue * superFat * conversion).toFixed(2);
+    return (saponificationValue * superFat).toFixed(2);
   }
 
   render() {

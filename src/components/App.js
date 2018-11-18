@@ -21,7 +21,7 @@ class App extends Component {
         ingredients: {},
         superFat: 5,
         waterPercentage: 30,
-        weight: 156
+        weight: 794
       },
       selectedMass: {
         type: "g",
@@ -79,10 +79,20 @@ class App extends Component {
 
   updateSelectedMass = (massType, conversion) =>  {
     let newSelectedMass = this.state.selectedMass;
+    let newSoap = this.state.soap;
+
+    if (massType === "g") {
+      newSoap.weight = Math.round(newSoap.weight / 0.035274);
+    } else {
+      newSoap.weight = Math.round(newSoap.weight * 0.035274);
+    }
     newSelectedMass.type = massType;
     newSelectedMass.conversion = conversion;
 
-    this.setState({selectedMass: newSelectedMass});
+    this.setState({
+      selectedMass: newSelectedMass,
+      soap: newSoap
+    });
   }
 
   updateIngredientPercentage(key, value) {
