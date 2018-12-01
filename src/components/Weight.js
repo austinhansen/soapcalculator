@@ -62,7 +62,7 @@ class Weight extends Component {
     if (this.props.weight >= 0) {
       weightTip = <p>
                     A bar of soap is roughly {`${barWeight} ${massType}`}. Your recipe will make ~{barCount} bars of soap. <br/>
-                    We recommend making enough for 8 bars at a time ({totalWeight} {massType}), which will fit into a <a href="https://www.amazon.ca/Crafters-Choice-1501-Regular-Silicone/dp/B0083ID7CE" target="_blank">Crafter's Choice 1501 mold</a>.
+                  We recommend making enough for 8 bars at a time ({totalWeight} {massType}), which will fit into a <a href="https://www.amazon.ca/Crafters-Choice-1501-Regular-Silicone/dp/B0083ID7CE" target="_blank" rel="noopener noreferrer">Crafter's Choice 1501 mold</a>.
                   </p>;
     }
 

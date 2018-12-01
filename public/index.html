@@ -12,11 +12,20 @@
     <meta content="image/jpg" property="og:image:type">
     <meta content="300" property="og:image:height">
     <meta content="300" property="og:image:width">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" type="image/png" href="%PUBLIC_URL%/favicon.png">
     <title>Make Soap!</title>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
   </body>
 
   <script>
