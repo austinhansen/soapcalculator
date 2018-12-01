@@ -68,7 +68,7 @@ class App extends Component {
     }
   }
 
-  updateWeight = (event) =>  {
+  updateWeight(event) {
     let newSoap = this.state.soap;
     const weight = event.target.value;
     const newWeight = weight >= 0 ? weight : 0;
@@ -77,7 +77,7 @@ class App extends Component {
     this.setState({soap: newSoap});
   }
 
-  updateSelectedMass = (massType, conversion) =>  {
+  updateSelectedMass(massType, conversion) {
     let newSelectedMass = this.state.selectedMass;
     let newSoap = this.state.soap;
 

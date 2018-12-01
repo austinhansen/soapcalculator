@@ -2,8 +2,13 @@ import React, { Component } from "react";
 import { InputGroup, ControlLabel, FormControl, FormGroup } from "react-bootstrap";
 
 class WaterPercentage extends Component {
-  handleChange = (event) =>  {
-    this.props.updateWaterPercentage(event.target.value)
+  constructor() {
+    super();
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    this.props.updateWaterPercentage(event.target.value);
   }
 
   render() {

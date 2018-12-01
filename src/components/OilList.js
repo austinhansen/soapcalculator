@@ -5,19 +5,20 @@ import Select from 'react-select';
 class OilList extends Component {
   constructor() {
     super();
-    this.state = {selectedOil: {name: ''}};
+    this.state = {selectedOil: {name: ""}};
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange = (option) =>  {
+  handleChange(option) {
     const oils = this.props.oils;
     const key = option.value;
     const oil = oils[key];
     oil["key"] = key;
 
-    if(oil) {
+    if (oil) {
       this.setState({selectedOil: oil});
-    };
+    }
   }
 
   handleSubmit() {
