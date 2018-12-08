@@ -80,7 +80,7 @@ class App extends Component {
 
   updateWeight(event) {
     let newSoap = this.state.soap;
-    const weight = parseInt(event.target.value);
+    const weight = parseInt(event.target.value, 10);
     const newWeight = weight >= 0 ? weight : 0;
     newSoap.weight = newWeight;
 
@@ -118,7 +118,7 @@ class App extends Component {
   updateWaterPercentage(value) {
     const soap = this.state.soap;
     const percentage = value >= 0 ? value : 0;
-    soap.waterPercentage = parseInt(percentage);
+    soap.waterPercentage = parseInt(percentage, 10);
 
     this.setState({
       soap: soap
@@ -127,7 +127,7 @@ class App extends Component {
 
   updateSuperFat(superFatValue) {
     const soap = this.state.soap;
-    soap.superFat = parseInt(superFatValue);
+    soap.superFat = parseInt(superFatValue, 10);
     this.setState({ soap });
   }
 
