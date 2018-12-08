@@ -134,10 +134,14 @@ class App extends Component {
   addToSoap(key) {
     if (key) {
       const soap = this.state.soap;
-      let ingredient = this.state.oils[key];
-      ingredient.value = "0";
-      soap.ingredients[key] = ingredient;
-      this.setState({ soap });
+      const ingredient = this.state.soap.ingredients[key];
+      let oil = this.state.oils[key];
+
+      if (!ingredient) {
+        oil.value = 0;
+        soap.ingredients[key] = oil;
+        this.setState({ soap });
+      }
     }
   }
 
