@@ -8,7 +8,8 @@
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-react": "^6.9.0",
     "eslint-plugin-standard": "^2.0.1",
-    "react-scripts": "1.0.0"
+    "prop-types": "^15.6.2",
+    "react-scripts": "1.0.13"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
@@ -25,5 +26,9 @@
     "deploy": "npm run build && surge ~/code/soapcalculator/build/ https://makesoap.co",
     "eject": "react-scripts eject",
     "lint": "eslint src --ext .js"
-  }
+  },
+  "main": "index.js",
+  "repository": "git@github.com:austinhansen/soapcalculator.git",
+  "author": "Austin Hansen <hello@austinhansen.io>",
+  "license": "MIT"
 }
