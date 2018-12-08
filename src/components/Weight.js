@@ -48,8 +48,11 @@ class Weight extends Component {
   handleClick(event) {
     const selectedMass = event.target.innerText;
     const selectedMassConversion = this.massConversion(selectedMass);
+    const currentMass = this.props.selectedMass.type;
     this.updateWeights(selectedMass);
-    this.props.updateSelectedMass(selectedMass, selectedMassConversion);
+    if (currentMass !== selectedMass) {
+      this.props.updateSelectedMass(selectedMass, selectedMassConversion);
+    }
   }
 
   render() {
@@ -60,10 +63,23 @@ class Weight extends Component {
     const totalWeight = Math.round(this.state.weights.total);
 
     if (this.props.weight >= 0) {
-      weightTip = <p>
-                    A bar of soap is roughly {`${barWeight} ${massType}`}. Your recipe will make ~{barCount} bars of soap. <br/>
-                  We recommend making enough for 8 bars at a time ({totalWeight} {massType}), which will fit into a <a href="https://www.amazon.ca/Crafters-Choice-1501-Regular-Silicone/dp/B0083ID7CE" target="_blank" rel="noopener noreferrer">Crafter's Choice 1501 mold</a>.
-                  </p>;
+      weightTip = (
+        <p>
+          A bar of soap is roughly {`${barWeight} ${massType}`}. Your recipe
+          will make ~{barCount} bars of soap. <br />
+          We recommend making enough for 8 bars at a time ({totalWeight}{" "}
+          {massType}
+          ), which will fit into a{" "}
+          <a
+            href="https://www.amazon.ca/Crafters-Choice-1501-Regular-Silicone/dp/B0083ID7CE"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Crafter's Choice 1501 mold
+          </a>
+          .
+        </p>
+      );
     }
 
     return (
@@ -71,9 +87,23 @@ class Weight extends Component {
         <h2>Step 1: How much soap do you want to make?</h2>
         <FormGroup>
           <InputGroup>
-            <FormControl value={this.props.weight} onChange={(e) => this.props.updateWeight(e)} type="number" alt="Soap Weight" placeholder={barWeight} />
-            <MassButton selectedMassType={this.props.selectedMass.type} handleClick={(e) => this.handleClick(e)} selectedMassName='g'/>
-            <MassButton selectedMassType={this.props.selectedMass.type} handleClick={(e) => this.handleClick(e)} selectedMassName='oz'/>
+            <FormControl
+              value={this.props.weight}
+              onChange={e => this.props.updateWeight(e)}
+              type="number"
+              alt="Soap Weight"
+              placeholder={barWeight}
+            />
+            <MassButton
+              selectedMassType={this.props.selectedMass.type}
+              handleClick={e => this.handleClick(e)}
+              selectedMassName="g"
+            />
+            <MassButton
+              selectedMassType={this.props.selectedMass.type}
+              handleClick={e => this.handleClick(e)}
+              selectedMassName="oz"
+            />
           </InputGroup>
         </FormGroup>
         {weightTip}
