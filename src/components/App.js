@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
-import { Grid, Row, Col } from 'react-bootstrap';
-import Banner from './Banner';
-import OilList from './OilList';
-import Soap from './Soap';
-import Weight from './Weight';
-import Recipe from './Recipe';
-import OptionalProperties from './OptionalProperties';
-import SoapProperties from './SoapProperties';
-import '../css/App.css';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'react-select/dist/react-select.css';
+import React, { Component } from "react";
+import { Grid, Row, Col } from "react-bootstrap";
+import Banner from "./Banner";
+import OilList from "./OilList";
+import Soap from "./Soap";
+import Weight from "./Weight";
+import Recipe from "./Recipe";
+import OptionalProperties from "./OptionalProperties";
+import SoapProperties from "./SoapProperties";
+import "../css/App.css";
+import "bootstrap/dist/css/bootstrap.css";
+import "react-select/dist/react-select.css";
 
 class App extends Component {
   constructor() {
@@ -32,7 +32,9 @@ class App extends Component {
     this.addToSoap = this.addToSoap.bind(this);
     this.removeFromSoap = this.removeFromSoap.bind(this);
     this.updateWeight = this.updateWeight.bind(this);
-    this.updateIngredientPercentage = this.updateIngredientPercentage.bind(this);
+    this.updateIngredientPercentage = this.updateIngredientPercentage.bind(
+      this
+    );
     this.updateWaterPercentage = this.updateWaterPercentage.bind(this);
     this.updateSelectedMass = this.updateSelectedMass.bind(this);
     this.updateSuperFat = this.updateSuperFat.bind(this);
@@ -40,11 +42,14 @@ class App extends Component {
 
   componentWillUpdate(nextProps, nextState) {
     localStorage.setItem(`soap`, JSON.stringify(nextState.soap));
-    localStorage.setItem(`selectedMass`, JSON.stringify(nextState.selectedMass));
+    localStorage.setItem(
+      `selectedMass`,
+      JSON.stringify(nextState.selectedMass)
+    );
   }
 
   componentWillMount() {
-    const oilsJSON = require('../oils.json');
+    const oilsJSON = require("../oils.json");
     this.setState({
       oils: oilsJSON
     });
@@ -52,16 +57,21 @@ class App extends Component {
     const localStorageSoap = localStorage.getItem(`soap`);
     const localStorageSelectedMass = localStorage.getItem(`selectedMass`);
 
-    if(localStorageSoap) {
+    if (localStorageSoap) {
       const soap = JSON.parse(localStorageSoap);
-      if (soap.ingredients && soap.superFat && soap.waterPercentage && soap.weight) {
+      if (
+        soap.ingredients &&
+        soap.superFat &&
+        soap.waterPercentage &&
+        soap.weight
+      ) {
         this.setState({
           soap: soap
         });
       }
     }
 
-    if(localStorageSelectedMass) {
+    if (localStorageSelectedMass) {
       this.setState({
         selectedMass: JSON.parse(localStorageSelectedMass)
       });
@@ -70,11 +80,11 @@ class App extends Component {
 
   updateWeight(event) {
     let newSoap = this.state.soap;
-    const weight = event.target.value;
+    const weight = parseInt(event.target.value);
     const newWeight = weight >= 0 ? weight : 0;
     newSoap.weight = newWeight;
 
-    this.setState({soap: newSoap});
+    this.setState({ soap: newSoap });
   }
 
   updateSelectedMass(massType, conversion) {
@@ -98,7 +108,7 @@ class App extends Component {
   updateIngredientPercentage(key, value) {
     const soap = this.state.soap;
     const percentage = value >= 0 ? value : 0;
-    soap.ingredients[key]['value'] = percentage;
+    soap.ingredients[key]["value"] = percentage;
 
     this.setState({
       soap: soap
@@ -108,7 +118,7 @@ class App extends Component {
   updateWaterPercentage(value) {
     const soap = this.state.soap;
     const percentage = value >= 0 ? value : 0;
-    soap.waterPercentage = percentage;
+    soap.waterPercentage = parseInt(percentage);
 
     this.setState({
       soap: soap
@@ -117,12 +127,12 @@ class App extends Component {
 
   updateSuperFat(superFatValue) {
     const soap = this.state.soap;
-    soap.superFat = superFatValue;
+    soap.superFat = parseInt(superFatValue);
     this.setState({ soap });
   }
 
   addToSoap(key) {
-    if(key) {
+    if (key) {
       const soap = this.state.soap;
       let ingredient = this.state.oils[key];
       ingredient.value = "0";
@@ -143,11 +153,22 @@ class App extends Component {
         <Banner />
         <Grid>
           <Row className="show-grid">
-            <Weight weight={this.state.soap.weight} updateWeight={this.updateWeight} selectedMass={this.state.selectedMass} updateSelectedMass={this.updateSelectedMass} type="number" alt="Soap Weight" />
+            <Weight
+              weight={this.state.soap.weight}
+              updateWeight={this.updateWeight}
+              selectedMass={this.state.selectedMass}
+              updateSelectedMass={this.updateSelectedMass}
+              type="number"
+              alt="Soap Weight"
+            />
           </Row>
 
           <Row className="show-grid">
-            <OptionalProperties soap={this.state.soap} updateWaterPercentage={this.updateWaterPercentage} updateSuperFat={this.updateSuperFat} />
+            <OptionalProperties
+              soap={this.state.soap}
+              updateWaterPercentage={this.updateWaterPercentage}
+              updateSuperFat={this.updateSuperFat}
+            />
           </Row>
 
           <hr />
@@ -157,9 +178,13 @@ class App extends Component {
             <OilList oils={this.state.oils} addToSoap={this.addToSoap} />
 
             <Col sm={4}>
-              <Soap soap={this.state.soap.ingredients} weight={this.state.soap.weight} removeFromSoap={this.removeFromSoap} updateIngredientPercentage={this.updateIngredientPercentage} />
+              <Soap
+                soap={this.state.soap.ingredients}
+                weight={this.state.soap.weight}
+                removeFromSoap={this.removeFromSoap}
+                updateIngredientPercentage={this.updateIngredientPercentage}
+              />
             </Col>
-
           </Row>
 
           <hr />
@@ -168,7 +193,12 @@ class App extends Component {
 
           <Row>
             <Col sm={6}>
-              <Recipe soap={this.state.soap} selectedMass={this.state.selectedMass} weight={this.state.soap.weight} oils={this.state.oils} />
+              <Recipe
+                soap={this.state.soap}
+                selectedMass={this.state.selectedMass}
+                weight={this.state.soap.weight}
+                oils={this.state.oils}
+              />
             </Col>
 
             <Col sm={6}>
