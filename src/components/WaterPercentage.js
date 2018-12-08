@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import { InputGroup, ControlLabel, FormControl, FormGroup } from "react-bootstrap";
+import PropTypes from "prop-types";
+import {
+  InputGroup,
+  ControlLabel,
+  FormControl,
+  FormGroup
+} from "react-bootstrap";
 
 class WaterPercentage extends Component {
   constructor() {
@@ -17,7 +23,13 @@ class WaterPercentage extends Component {
         <ControlLabel>Water</ControlLabel>
         <FormGroup>
           <InputGroup>
-            <FormControl value={this.props.waterPercentage} onChange={this.handleChange} type="number" alt="Water Percentage" placeholder="30" />
+            <FormControl
+              value={this.props.waterPercentage}
+              onChange={this.handleChange}
+              type="number"
+              alt="Water Percentage"
+              placeholder="30"
+            />
             <InputGroup.Addon>%</InputGroup.Addon>
           </InputGroup>
         </FormGroup>
@@ -27,8 +39,8 @@ class WaterPercentage extends Component {
 }
 
 WaterPercentage.propTypes = {
-  waterPercentage: React.PropTypes.number.isRequired,
-  updateWaterPercentage: React.PropTypes.func.isRequired
+  waterPercentage: PropTypes.number.isRequired,
+  updateWaterPercentage: PropTypes.func.isRequired
 };
 
 export default WaterPercentage;

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class SoapProperty extends Component {
   constructor() {
@@ -7,14 +8,14 @@ class SoapProperty extends Component {
   }
 
   soapProperty(property) {
-    const soap = {...this.props.soap};
-    const soapIds = Object.keys(soap)
+    const soap = { ...this.props.soap };
+    const soapIds = Object.keys(soap);
 
     const propertyValue = soapIds.reduce((prevValue, key) => {
       const percentage = soap[key].value;
       const value = soap[key][property];
 
-      prevValue += percentage * value / 100 || 0;
+      prevValue += (percentage * value) / 100 || 0;
       return prevValue;
     }, 0);
 
@@ -25,24 +26,25 @@ class SoapProperty extends Component {
     const low = this.props.lowIdealValue;
     const high = this.props.highIdealValue;
     const soapProperty = this.soapProperty(this.props.property);
-    const className = soapProperty >= low && soapProperty <= high ? "good-soap-property" : "";
+    const className =
+      soapProperty >= low && soapProperty <= high ? "good-soap-property" : "";
     const description = `${this.props.description} (${low} to ${high}):`;
 
     return (
       <tr>
         <td>{description}</td>
-        <td className={className} >{soapProperty}</td>
+        <td className={className}>{soapProperty}</td>
       </tr>
     );
   }
 }
 
 SoapProperty.propTypes = {
-  soap: React.PropTypes.object.isRequired,
-  lowIdealValue: React.PropTypes.number.isRequired,
-  highIdealValue: React.PropTypes.number.isRequired,
-  property: React.PropTypes.string.isRequired,
-  description: React.PropTypes.string.isRequired
+  soap: PropTypes.object.isRequired,
+  lowIdealValue: PropTypes.number.isRequired,
+  highIdealValue: PropTypes.number.isRequired,
+  property: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired
 };
 
 export default SoapProperty;

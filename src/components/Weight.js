@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import { Col, FormGroup, InputGroup, FormControl } from "react-bootstrap";
 import MassButton from "./MassButton";
 
@@ -113,10 +114,10 @@ class Weight extends Component {
 }
 
 Weight.propTypes = {
-  selectedMass: React.PropTypes.object.isRequired,
-  updateSelectedMass: React.PropTypes.func.isRequired,
-  weight: React.PropTypes.number.isRequired,
-  updateWeight: React.PropTypes.func.isRequired
+  selectedMass: PropTypes.object.isRequired,
+  updateSelectedMass: PropTypes.func.isRequired,
+  weight: PropTypes.number.isRequired,
+  updateWeight: PropTypes.func.isRequired
 };
 
 export default Weight;

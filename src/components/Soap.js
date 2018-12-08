@@ -1,6 +1,13 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import Ingredient from "./Ingredient";
-import { ControlLabel, Form, InputGroup, FormGroup, FormControl } from "react-bootstrap";
+import {
+  ControlLabel,
+  Form,
+  InputGroup,
+  FormGroup,
+  FormControl
+} from "react-bootstrap";
 import CSSTransitionGroup from "react-addons-css-transition-group";
 
 class Soap extends Component {
@@ -23,38 +30,42 @@ class Soap extends Component {
             transitionEnterTimeout={200}
             transitionLeaveTimeout={200}
           >
-            {
-              Object
-                .keys(this.props.soap)
-                .map(key => <Ingredient
-                  key={key}
-                  index={key}
-                  details={this.props.soap[key]}
-                  removeFromSoap={this.props.removeFromSoap}
-                  updateIngredientPercentage={this.props.updateIngredientPercentage}
-                />)
-            }
+            {Object.keys(this.props.soap).map(key => (
+              <Ingredient
+                key={key}
+                index={key}
+                details={this.props.soap[key]}
+                removeFromSoap={this.props.removeFromSoap}
+                updateIngredientPercentage={
+                  this.props.updateIngredientPercentage
+                }
+              />
+            ))}
           </CSSTransitionGroup>
         </FormGroup>
         <Form inline>
           <FormGroup>
-            <ControlLabel>Total:</ControlLabel>
-            {" "}
+            <ControlLabel>Total:</ControlLabel>{" "}
             <InputGroup>
-              <FormControl type="number" value={total} readOnly alt="Total Percent Amount" />
+              <FormControl
+                type="number"
+                value={total}
+                readOnly
+                alt="Total Percent Amount"
+              />
               <InputGroup.Addon>%</InputGroup.Addon>
             </InputGroup>
           </FormGroup>
-       </Form>
+        </Form>
       </div>
     );
   }
 }
 
 Soap.propTypes = {
-  soap: React.PropTypes.object.isRequired,
-  removeFromSoap: React.PropTypes.func.isRequired,
-  updateIngredientPercentage: React.PropTypes.func.isRequired
+  soap: PropTypes.object.isRequired,
+  removeFromSoap: PropTypes.func.isRequired,
+  updateIngredientPercentage: PropTypes.func.isRequired
 };
 
 export default Soap;
